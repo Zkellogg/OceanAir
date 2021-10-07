@@ -1,0 +1,13 @@
+.header {
+  width: 100%;
+  height: 150px;
+  background-color: rgb(149, 149, 177);
+  margin-top: -1.33rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.oceanAirLogo {
+  height: 8rem;
+  width: 25rem;
+}

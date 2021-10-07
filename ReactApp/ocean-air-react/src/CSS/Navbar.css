@@ -1,0 +1,9 @@
+.navbarMain {
+  display: flex;
+  background: linear-gradient(#738eab, #3a639b);
+}
+
+.navbarMain img {
+  width: 45vh;
+  height: 12vh;
+}
