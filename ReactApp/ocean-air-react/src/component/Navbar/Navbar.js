@@ -17,6 +17,7 @@ function NavBarComp() {
         // bg="info"
         variant="dark"
         className="navbarMain"
+        fixed="top"
 
         // style={{background-color: #9292b0}}
       >

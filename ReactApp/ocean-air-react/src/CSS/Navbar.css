@@ -7,3 +7,20 @@
   width: 45vh;
   height: 12vh;
 }
+
+
+@media only screen and (max-width: 420px) {
+  .navbar-toggler:focus {
+    text-decoration: none;
+    
+ }
+ .navbar-dark .navbar-toggler {
+  width: 100%;
+}
+.navbar-collapse {
+  flex-basis: 100%;
+  flex-grow: 1;
+  align-items: center;
+  text-align: center;
+}
+}
