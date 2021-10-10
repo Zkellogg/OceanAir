@@ -1,14 +1,29 @@
 import Navbar from "react-bootstrap/Navbar";
 import Nav from "react-bootstrap/Nav";
-import NavDropdown from "react-bootstrap/NavDropdown";
-import Form from "react-bootstrap/Form";
-import FormControl from "react-bootstrap/FormControl";
 import React from "react";
 import Container from "react-bootstrap/Container";
 import logo from "../../images/OceanAirLogoB_Locations_600x200.png";
 import "../../CSS/Navbar.css";
+import { connect } from "react-redux";
 
-function NavBarComp() {
+function NavBarComp(props) {
+
+  const handleSignIn=()=>{
+    if(props.isSignInClicked){
+      props.OnSignInClicked(false)
+    }else{
+      props.OnSignInClicked(true)
+    }
+  }
+
+  const handleSignUp=()=>{
+    if(props.isSignUpClicked){
+      props.OnSignUpClicked(false)
+    }else{
+      props.OnSignUpClicked(true)
+    }
+  }
+
   return (
     <div>
       <Navbar
@@ -22,7 +37,7 @@ function NavBarComp() {
         // style={{background-color: #9292b0}}
       >
         <Container>
-          <Navbar.Brand href="#home">
+          <Navbar.Brand href="/">
             <img
               src={logo}
               width="350rem"
@@ -39,7 +54,8 @@ function NavBarComp() {
             </Nav>
             <Nav>
               <Nav.Link href="#aboutUs">About Us</Nav.Link>
-              <Nav.Link href="#memes">Sign-In</Nav.Link>
+              <Nav.Link onClick={handleSignIn} href="#">Sign In</Nav.Link>
+              <Nav.Link onClick={handleSignUp} href="#">Sign Up</Nav.Link>
             </Nav>
           </Navbar.Collapse>
         </Container>
@@ -48,4 +64,18 @@ function NavBarComp() {
   );
 }
 
-export default NavBarComp;
+const mapStateToProps=(state)=>{
+  return{
+    isSignInClicked:state.isSignInActive,
+    isSignUpClicked:state.isSignUpActive
+  }
+}
+
+const mapDispatchToProps=(dispatch)=>{
+  return{
+    OnSignInClicked:(isClicked)=>dispatch({type:'ON_SIGNINBTN_CLICKED',payload:isClicked}),
+    OnSignUpClicked:(isClicked)=>dispatch({type:'ON_SIGNUPBTN_CLICKED',payload:isClicked})
+  }
+}
+
+export default connect(mapStateToProps,mapDispatchToProps)(NavBarComp);

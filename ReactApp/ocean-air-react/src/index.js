@@ -1,18 +1,24 @@
 import React from "react";
 import ReactDOM from "react-dom";
-//need to install react-router react-router-dom
 import { BrowserRouter, Switch, Route } from "react-router-dom";
 import "./index.css";
 import App from "./App";
 import reportWebVitals from "./reportWebVitals";
+import {createStore} from 'redux'
+import { Provider } from "react-redux";
+import reducer from './store/reducer'
+
+const store = createStore(reducer,window.__REDUX_DEVTOOLS_EXTENSION__ && window.__REDUX_DEVTOOLS_EXTENSION__())
 
 ReactDOM.render(
   <React.StrictMode>
+    <Provider store={store}>
     <BrowserRouter>
       <Switch>
-        <Route exact path="/" component={App} />
+        <Route exact path="/" component={App}/>
       </Switch>
     </BrowserRouter>
+    </Provider>
   </React.StrictMode>,
   document.getElementById("root")
 );

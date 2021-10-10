@@ -1,16 +1,27 @@
 import React from "react";
 import "../CSS/Home.css";
-import chairPic from "../images/chairpic.png";
+import SignIn from "./SignIn";
+import { connect } from "react-redux";
 
-const Home = () => {
+const Home = (props) => {
   return (
-    <div>
+    <div className="homepage-container">
       <div className="imageDiv">
-        <h1>Test</h1>
+      <SignIn 
+      isSignInClicked={props.isSignInClicked}
+      isSignUpClicked={props.isSignUpClicked}
+      />
       </div>
       <div id="aboutUs" className="aboutUs"></div>
     </div>
   );
 };
 
-export default Home;
+const mapStateToProps=(state)=>{
+  return{
+    isSignInClicked:state.isSignInActive,
+    isSignUpClicked:state.isSignUpActive
+  }
+}
+
+export default connect(mapStateToProps)(Home);

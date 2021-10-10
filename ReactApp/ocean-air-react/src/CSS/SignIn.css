@@ -1,0 +1,178 @@
+.signUpBackground{
+    position: relative;
+    top: 7rem;
+}
+
+.loginBackground{
+    position: relative;
+    top: 4rem;
+}
+
+.loginDiv{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-evenly;
+    width: 25rem;
+    height: 20rem;
+    background-color: #fff;
+    opacity: 1;
+}
+
+.signUpDiv{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-evenly;
+    width: 25rem;
+    height: 30rem;
+    background-color: #fff;
+    opacity: 1;
+}
+
+.loginHeading{
+    display: flex;
+    justify-content: space-between;
+    box-shadow: rgb(0 0 0/10%) 0px 5px 5px 0px;
+    min-width: 100%;
+}
+
+.signUpHeading{
+    display: flex;
+    justify-content: space-between;
+    box-shadow: rgb(0 0 0/10%) 0px 5px 5px 0px;
+    min-width: 100%;
+}
+
+
+.loginHeading h5 {
+    padding-left: 15px;
+}
+
+.signUpHeading h5 {
+    padding-left: 15px;
+}
+
+.loginHeading button{
+    padding-right: 20px;
+}
+
+.signUpHeading button{
+    padding-right: 20px;
+}
+
+.loginTextBoxes{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    height: 35%;
+    min-width: 95%;
+}
+
+.signUpTextBoxes{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    height: 50%;
+    min-width: 95%;
+}
+
+.loginTextBoxes input{
+    height: 3em;
+    border-radius: 5px;
+    border-width: thin;
+    padding-left: 15px;
+}
+
+.signUpTextBoxes input{
+    height: 3em;
+    border-radius: 5px;
+    border-width: thin;
+    padding-left: 15px;
+}
+
+.loginBtn{
+    text-align: center;
+    font-weight: 700;
+    background-color: #3a639b;
+    color: wheat;
+    border: none;
+    padding-left: 10rem;
+    padding-right: 10rem;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    border-radius: 2em;
+    box-shadow: rgb(0 0 0/25%) 0px 0px 15px 5px;
+}
+
+.signUpBtn{
+    text-align: center;
+    font-weight: 700;
+    background-color: #3a639b;
+    color: wheat;
+    border: none;
+    padding-left: 10rem;
+    padding-right: 10rem;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    border-radius: 2em;
+    box-shadow: rgb(0 0 0/25%) 0px 0px 15px 5px;
+}
+
+.createDiv{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    height: 3em;
+    min-width: 95%;
+    border-top: groove;
+    border-width: thin;
+}
+
+.signInDiv{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    height: 3em;
+    min-width: 95%;
+    border-top: groove;
+    border-width: thin;
+}
+
+.createDiv button{
+    border: solid;
+    border-width: thin;
+    background-color: rgba(255 255 255 .55);
+    color: #3a639b;
+    border-radius: 20px;
+    padding: 5px;
+}
+
+.signInDiv button{
+    border: solid;
+    border-width: thin;
+    background-color: rgba(255 255 255 .55);
+    color: #3a639b;
+    border-radius: 20px;
+    padding: 5px;
+}
+
+@media (min-width:320px) and (max-width:425px) {
+    .loginDiv{
+        max-width: 18rem;
+    }
+
+    .signUpDiv{
+        max-width: 18rem;
+    }
+
+    .loginBtn{
+        padding-right: 5rem;
+        padding-left: 5rem;
+    }
+
+    .signUpBtn{
+        padding-left: 6rem;
+        padding-right: 6rem;
+    }
+}
