@@ -48,9 +48,9 @@ function NavBarComp(props) {
           <Navbar.Toggle aria-controls="responsive-navbar-nav" />
           <Navbar.Collapse id="responsive-navbar-nav">
             <Nav className="me-auto">
-              <Nav.Link href="#features">Book 30A Seagrove Beach, FL</Nav.Link>
-              <Nav.Link href="#pricing">Book Pompano Beach, FL</Nav.Link>
-              <Nav.Link href="#pricing">Book Myrtle Beach , SC</Nav.Link>
+              <Nav.Link href="https://oceanair.guestybookings.com/listings/5ffcaed496912b002f0ec7e7">Book 30A Seagrove Beach, FL</Nav.Link>
+              <Nav.Link href="https://oceanair.guestybookings.com/listings/5fa03839d8c9cd002f4a90e6">Book Pompano Beach, FL</Nav.Link>
+              <Nav.Link href="https://oceanair.guestybookings.com/listings/5fc519821b8cf2002f1dbf83">Book Myrtle Beach , SC</Nav.Link>
             </Nav>
             <Nav>
               <Nav.Link href="#aboutUs">About Us</Nav.Link>
