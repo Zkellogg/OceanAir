@@ -12,7 +12,7 @@ const Home = (props) => {
           isSignUpClicked={props.isSignUpClicked}
         />
       </div>
-      <div id="aboutUs" className="aboutUs">
+      {/* <div id="aboutUs" className="aboutUs">
         <h1>
           <strong>About Us</strong>
         </h1>
@@ -25,7 +25,7 @@ const Home = (props) => {
           egestas maecenas pharetra convallis posuere morbi leo urna molestie at
           elementum eu facilisis sed
         </h5>
-      </div>
+      </div>*/}
     </div>
   );
 };
