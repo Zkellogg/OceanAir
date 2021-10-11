@@ -1,0 +1,28 @@
+.contact {
+  margin-top: 20px;
+  background: linear-gradient(#738eab, #3a639b);
+  padding: 25px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+.contact form {
+  width: 75%;
+}
+.contact input {
+  box-shadow: 3px 3px 3px;
+}
+.contact textarea {
+  box-shadow: 3px 3px 3px;
+  margin-bottom: 7px;
+}
+.contact button {
+  box-shadow: black 3px 3px 3px;
+}
+.contact h2 {
+  text-align: center;
+  font-family: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande",
+    "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
+  color: white;
+}

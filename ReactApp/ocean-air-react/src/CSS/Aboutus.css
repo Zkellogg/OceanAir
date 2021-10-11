@@ -20,3 +20,19 @@
   font-family: Verdana, Geneva, Tahoma, sans-serif;
   text-align: center;
 }
+
+.image1 {
+  height: 200px;
+  width: 50%;
+  border: 1px solid black;
+}
+.image2 {
+  height: 200px;
+  width: 50%;
+  border: 1px solid black;
+}
+.image3 {
+  height: 200px;
+  width: 100%;
+  border: 1px solid black;
+}
