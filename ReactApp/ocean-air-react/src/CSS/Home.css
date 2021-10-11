@@ -1,17 +1,3 @@
-.imageDiv {
-  height: 40rem;
-  width: 100%;
-  background-image: url(../images/chairpic.png);
-  background-repeat: no-repeat;
-  background-size: 100% 40rem;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
-
-.imageDiv button {
-  top: 100px;
-}
 
 /* .aboutUs {
   width: 100%;
@@ -35,3 +21,64 @@
   font-family: Verdana, Geneva, Tahoma, sans-serif;
   text-align: center;
 } */
+
+
+.imageDiv {
+  height: 56rem;
+  width: 100%;
+  background-image: url(../images/mobilechair.jpeg);
+  background-repeat: no-repeat;
+  background-size: 100% 56rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.imageDiv button {
+  top: 100px;
+}
+
+.aboutUs {
+  width: 100%;
+  height: 40rem;
+  background-color: brown;
+
+}
+
+@media only screen and (min-width: 764px) {
+  .imageDiv {
+    height: 64rem;
+    width: 100%;
+    background-image: url(../images/mobilechair.jpeg);
+    background-repeat: no-repeat;
+    background-size: 100% 64rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+}
+
+@media only screen and (min-width: 1024px) {
+  .imageDiv {
+    height: 86rem;
+    width: 100%;
+    background-image: url(../images/mobilechair.jpeg);
+    background-repeat: no-repeat;
+    background-size: 100% 86rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+}
+@media only screen and (min-width: 1300px) {
+  .imageDiv {
+    height: 100rem;
+    width: 100%;
+    background-image: url(../images/chairpic.png);
+    background-repeat: no-repeat;
+    background-size: 100% 100rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+}
