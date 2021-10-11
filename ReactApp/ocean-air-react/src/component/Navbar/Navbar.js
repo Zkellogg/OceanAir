@@ -54,8 +54,9 @@ function NavBarComp(props) {
             </Nav>
             <Nav>
               <Nav.Link href="#aboutUs">About Us</Nav.Link>
-              <Nav.Link onClick={handleSignIn} href="#">Sign In</Nav.Link>
-              <Nav.Link onClick={handleSignUp} href="#">Sign Up</Nav.Link>
+              {props.isAuth ? null:<Nav.Link onClick={handleSignIn} href="#">Sign In</Nav.Link>}
+              {props.isAuth ? null :<Nav.Link onClick={handleSignUp} href="#">Sign Up</Nav.Link>}
+              {props.isAuth ? <Nav.Link href="/">Sign Out</Nav.Link>:null}
             </Nav>
           </Navbar.Collapse>
         </Container>
@@ -66,6 +67,7 @@ function NavBarComp(props) {
 
 const mapStateToProps=(state)=>{
   return{
+    isAuth:state.isAuth,
     isSignInClicked:state.isSignInActive,
     isSignUpClicked:state.isSignUpActive
   }

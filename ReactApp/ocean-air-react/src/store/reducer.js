@@ -1,10 +1,21 @@
 const initialState={
+    isAuthen:false,
     isSignInActive:false,
     isSignUpActive:false
 }
 
 const reducer=(state=initialState,action)=>{
-    if(action.type=='ON_SIGNINBTN_CLICKED'){
+    if(action.type=='ON_LOGIN'){
+        return{
+            ...state,
+            isAuthen:true
+        }
+    }else if(action.type=='ON_LOGOUT'){
+        return{
+            ...state,
+            isAuthen:false
+        }
+    }else if(action.type=='ON_SIGNINBTN_CLICKED'){
         return{...state,
             isSignInActive:action.payload,
             isSignUpActive:false

@@ -1,8 +1,11 @@
-import React from "react"
+import React,{useState} from "react"
 import "../CSS/SignIn.css";
 import { connect } from "react-redux";
 
 function SignIn(props){
+    const [userSignIn,setUserSignIn]=useState({})
+    const [userSignUp,setUserSignUp]=useState({})
+
     const handleSignIn=()=>{
         if(props.isSignInClicked){
             props.OnSignInClicked(false)
@@ -19,6 +22,57 @@ function SignIn(props){
         }
     }
 
+    const handleOnChangeSignIn=(e)=>{
+        setUserSignIn({
+            ...userSignIn,
+            [e.target.name]:e.target.value
+        })
+    }
+
+    const handleOnChangeSignUp=(e)=>{
+        setUserSignUp({
+            ...userSignUp,
+            [e.target.name]:e.target.value
+        })
+    }
+
+    const handleOnLogin=()=>{
+        fetch('http://localhost:8080/login',{
+            method:'POST',
+            headers:{
+                'Content-Type':'application/json'
+            },
+            body:JSON.stringify({
+                email:userSignIn.email,
+                password:userSignIn.password
+            })
+        }).then(response=>response.json())
+        .then(results=>{
+            localStorage.setItem('jsonwebtoken',results.token)
+            // props.onLogin()
+            console.log(results)
+        })
+    }
+
+    const handleOnRegister=()=>{
+        fetch('http://localhost:8080/register',{
+            method:'POST',
+            headers:{
+                'Content-Type':'application/json'
+            },
+            body:JSON.stringify({
+                firstName:userSignUp.firstName,
+                lastName:userSignUp.lastName,
+                email:userSignUp.email,
+                password:userSignUp.password
+            })
+        }).then(response=>response.json())
+        .then(results=>{
+            console.log(results)
+        })
+    }
+
+
     const SignInBtn=(
         <div className="loginBackground">
             <div className="loginDiv">
@@ -27,10 +81,10 @@ function SignIn(props){
                     <button type="button" class="btn-close" aria-label="Close"></button>
                 </div>
                 <div className="loginTextBoxes">
-                    <input type="text" placeholder="Email" required/>
-                    <input type="password" placeholder="Password" required/>
+                    <input type="text" placeholder="Email" onChange={handleOnChangeSignIn} name="email" required/>
+                    <input type="password" placeholder="Password" onChange={handleOnChangeSignIn} name="password" required/>
                 </div>
-                <button className="loginBtn">Sign In</button>
+                <button className="loginBtn" onClick={handleOnLogin}>Sign In</button>
                 <div className="createDiv">
                     <label>Don't have an account?</label><button onClick={handleSignUp}>Create one</button>
                 </div>
@@ -46,12 +100,12 @@ function SignIn(props){
                     <button type="button" class="btn-close" aria-label="Close"></button>
                 </div>
                 <div className="signUpTextBoxes">
-                    <input type="text" placeholder="First name" required/>
-                    <input type="text" placeholder="Last name" required/>
-                    <input type="text" placeholder="Email" required/>
-                    <input type="password" placeholder="Password" required/>
+                    <input type="text" placeholder="First name" onChange={handleOnChangeSignUp} name="firstName" required/>
+                    <input type="text" placeholder="Last name" onChange={handleOnChangeSignUp} name="lastName" required/>
+                    <input type="text" placeholder="Email" onChange={handleOnChangeSignUp} name="email" required/>
+                    <input type="password" placeholder="Password" onChange={handleOnChangeSignUp} name="password" required/>
                 </div>
-                <button className="signUpBtn">Sign Up</button>
+                <button className="signUpBtn" onClick={handleOnRegister}>Sign Up</button>
                 <div className="signInDiv">
                     <label>Have an account?</label><button onClick={handleSignIn}>Login</button>
                 </div>
