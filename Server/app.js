@@ -1,34 +1,15 @@
 const express = require("express");
+const app = express();
 const jwt = require("jsonwebtoken");
 const cors = require("cors");
-const bodyParser = require("body-parser");
 const authenticate = require("./authentication/authenticate");
 global.bcrypt = require("bcryptjs");
-const app = express();
-const nodemailer = require("nodemailer");
 const sgMail = require("@sendgrid/mail");
 const { send } = require("@sendgrid/mail");
 
 sgMail.setApiKey(
   "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"
 );
-
-// const msg = {
-//   to: "zac@visitoceanair.com", // Change to your recipient
-//   from: "info@visitoceanair.com", // Change to your verified sender
-//   subject: "Sending with SendGrid is Fun",
-//   text: "and easy to do anywhere, even with Node.js",
-//   html: "<strong>and easy to do anywhere, even with Node.js</strong>",
-// };
-
-// sgMail
-//   .send(msg)
-//   .then(() => {
-//     console.log("Email sent");
-//   })
-//   .catch((error) => {
-//     console.error(error);
-//   });
 
 require("dotenv").config();
 
@@ -116,32 +97,7 @@ app.post("/login", (req, res) => {
         }
       }
     );
-    // console.log(passphrase)
-    // return user.email==useremail &&
   });
-
-  //   app.post("/contact", (req, res) => {
-  //     const { email } = req.body;
-  //     const { name } = req.body;
-  //     const { message } = req.body;
-  //     const mail = {
-  //       to: "zac@visitoceanair.com", // Change to your recipient
-  //       from: "info@visitoceanair.com", // Change to your verified sender
-  //       subject: `Message from ${email}${name}`,
-  //       text: message,
-  //       html: "<strong>and easy to do anywhere, even with Node.js</strong>",
-  //     };
-  //     res.json({ mail: mail });
-  //     // sgMail
-  //     //   .send(mail)
-  //     //   .then(() => {
-  //     //     console.log("Email sent");
-  //     //     res.json({ success: "email sent" });
-  //     //   })
-  //     //   .catch((error) => {
-  //     //     console.error(error);
-  //     //   });
-  //   });
 
   // bcrypt.compare(password,users.password,function(error,results){
   //     if(results){
@@ -157,14 +113,6 @@ app.post("/login", (req, res) => {
   //     }
   // })
 });
-
-// const contactEmail = nodemailer.createTransport({
-//   service: "SendGrid",
-//   auth: {
-//     user: "apikey",
-//     pass: "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",
-//   },
-// });
 
 app.listen(8080, () => {
   console.log("Server is running...");
