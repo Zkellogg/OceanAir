@@ -4,18 +4,53 @@ const jwt = require("jsonwebtoken");
 const cors = require("cors");
 const authenticate = require("./authentication/authenticate");
 global.bcrypt = require("bcryptjs");
-const sgMail = require("@sendgrid/mail");
-const { send } = require("@sendgrid/mail");
-
-sgMail.setApiKey(
-  "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"
-);
+// const sgMail = require("@sendgrid/mail");
+// const { send } = require("@sendgrid/mail");
 
 require("dotenv").config();
+
+// sgMail.setApiKey(
+//   "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"
+// );
 
 app.use(cors());
 app.use(express.json());
 app.use(express.urlencoded());
+
+global.users = [];
+global.emails=[];
+
+app.post("/add-review",(req,res)=>{
+    const {location}=req.body;
+    const {name}=req.body.name;
+    const {rating}=parseInt(req.body);
+    const {title}=req.body;
+    const {message}=req.body;
+    const {dateStayed}=req.body;
+    
+    const mail = {
+    to: "zac@visitoceanair.com", // Change to your recipient
+    from: "info@visitoceanair.com", // Change to your verified sender
+    subject: `Title: ${title} - Rating: ${rating}`,
+    text: message,
+    html: `<strong>Review from: ${name} for ${location}, ${dateStayed} </strong><br>
+    ${title}<br>
+    ${message}`,
+  };
+
+//   sgMail
+//     .send(mail)
+//     .then(() => {
+//       console.log("Email sent");
+//       res.json({ success: "email sent" });
+//     })
+//     .catch((error) => {
+//       console.error(error);
+//     });
+
+    emails.push(mail)
+    res.json({success:true,review:mail})
+})
 
 app.post("/contact", (req, res) => {
   const { email } = req.body;
@@ -41,8 +76,6 @@ app.post("/contact", (req, res) => {
       console.error(error);
     });
 });
-
-global.users = [];
 
 app.post("/register", (req, res) => {
   const firstName = req.body.firstName;
