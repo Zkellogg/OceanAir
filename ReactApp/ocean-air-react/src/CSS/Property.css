@@ -1,0 +1,15 @@
+.BaseProperty-Container{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+}
+
+.PropertyDiv{
+    width: 100%;
+}
+
+.PropertyHeading{
+    font-size: 15rem;
+}
