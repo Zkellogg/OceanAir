@@ -12,7 +12,7 @@ const Home = (props) => {
       isSignUpClicked={props.isSignUpClicked}
       />
       </div>
-      <div id="aboutUs" className="aboutUs"></div>
+      {/* <div id="aboutUs" className="aboutUs"></div> */}
     </div>
   );
 };

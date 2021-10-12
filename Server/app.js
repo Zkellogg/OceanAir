@@ -1,120 +1,171 @@
-const express=require('express')
-const jwt=require('jsonwebtoken')
-const cors=require('cors')
-const authenticate = require('./authentication/authenticate')
-global.bcrypt=require('bcryptjs')
-const app=express()
-const nodemailer = require("nodemailer")
+const express = require("express");
+const jwt = require("jsonwebtoken");
+const cors = require("cors");
+const bodyParser = require("body-parser");
+const authenticate = require("./authentication/authenticate");
+global.bcrypt = require("bcryptjs");
+const app = express();
+const nodemailer = require("nodemailer");
+const sgMail = require("@sendgrid/mail");
+const { send } = require("@sendgrid/mail");
 
-require('dotenv').config()
+sgMail.setApiKey(
+  "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"
+);
 
-app.use(cors())
-app.use(express.json())
+// const msg = {
+//   to: "zac@visitoceanair.com", // Change to your recipient
+//   from: "info@visitoceanair.com", // Change to your verified sender
+//   subject: "Sending with SendGrid is Fun",
+//   text: "and easy to do anywhere, even with Node.js",
+//   html: "<strong>and easy to do anywhere, even with Node.js</strong>",
+// };
 
-global.users=[]
+// sgMail
+//   .send(msg)
+//   .then(() => {
+//     console.log("Email sent");
+//   })
+//   .catch((error) => {
+//     console.error(error);
+//   });
 
-app.post('/register',(req,res)=>{
-    const firstName=req.body.firstName
-    const lastName=req.body.lastName
-    const email=req.body.email
-    const password=req.body.password
+require("dotenv").config();
 
-    bcrypt.genSalt(10,function(error,salt){
-        if(!error){
-            bcrypt.hash(password,salt,function(error,hash){
-                if(!error){
-                    const user={
-                        firstName:firstName,
-                        lastName:lastName,
-                        email:email,
-                        password:hash
-                    }
-                    users.push(user)
-                    console.log(users)
-                    res.json({success:'200',message:'Successfully registered account!'})
-                }else{
-                    res.json({success:false,message:'Failed to register account'})
-                }
-            })
-        }else{
-            res.json({success:false,message:'Failed to register account'})
-        }
-    })
-})
-
-app.post('/login',(req,res)=>{
-    const useremail=req.body.email
-    const password=req.body.password
-
-    const persistedUser=users.find(user=>{
-        const passphrase=bcrypt.compare(password,user.password,function(error,results){
-            if(results && user.email==useremail){
-                const userLogin={
-                    useremail:users.email
-                }
-                const token=jwt.sign({user:userLogin},'KEYBOARD CAT')
-                console.log(token)
-                res.json({success:true,token:token})
-            }else{
-                res.json({success:false,message:'Failed to login in!'})
-            }
-        })
-        // console.log(passphrase)
-        // return user.email==useremail && 
-    })
-
-    // bcrypt.compare(password,users.password,function(error,results){
-    //     if(results){
-    //         console.log(results)
-    //         // const userLogin={
-    //         //     username:users.username
-    //         // }
-    //         // const token=jwt.sign({user:userLogin},'KEYBOARD CAT')
-    //         // console.log(token)
-    //         // res.json({success:true,message:'Successfully logged in!'})
-    //     }else{
-    //         res.json({success:false,message:'Failed to login in!'})
-    //     }
-    // })
-})
-
-const contactEmail = nodemailer.createTransport({
-    service: 'gmail',
-    auth: {
-        user: "oceanair073@gmail.com",
-        pass: "VOA073!!"
-    },
-})
-
-contactEmail.verify((error)=> {
-    if (error) {
-        console.log(error);
-    } else {
-        console.log("Ready to send");
-    }
-})
+app.use(cors());
+app.use(express.json());
+app.use(express.urlencoded());
 
 app.post("/contact", (req, res) => {
-  const name = req.body.name;
-  const email = req.body.email;
-  const message = req.body.message; 
+  const { email } = req.body;
+  const { name } = req.body;
+  const { message } = req.body;
   const mail = {
-    from: name,
-    to: "zac@visitoceanair.com",
-    subject: "Contact Form Website",
-    html: `<p>Name: ${name}</p>
-           <p>Email: ${email}</p>
-           <p>Message: ${message}</p>`,
+    to: "zac@visitoceanair.com", // Change to your recipient
+    from: "info@visitoceanair.com", // Change to your verified sender
+    subject: `Message from ${email}`,
+    text: message,
+    html: `<strong>From: ${name}</strong><br>
+    ${email}<br>
+    ${message}`,
   };
-  contactEmail.sendMail(mail, (error) => {
-    if (error) {
-      res.json({ status: "ERROR" });
+
+  sgMail
+    .send(mail)
+    .then(() => {
+      console.log("Email sent");
+      res.json({ success: "email sent" });
+    })
+    .catch((error) => {
+      console.error(error);
+    });
+});
+
+global.users = [];
+
+app.post("/register", (req, res) => {
+  const firstName = req.body.firstName;
+  const lastName = req.body.lastName;
+  const email = req.body.email;
+  const password = req.body.password;
+
+  bcrypt.genSalt(10, function (error, salt) {
+    if (!error) {
+      bcrypt.hash(password, salt, function (error, hash) {
+        if (!error) {
+          const user = {
+            firstName: firstName,
+            lastName: lastName,
+            email: email,
+            password: hash,
+          };
+          users.push(user);
+          console.log(users);
+          res.json({
+            success: "200",
+            message: "Successfully registered account!",
+          });
+        } else {
+          res.json({ success: false, message: "Failed to register account" });
+        }
+      });
     } else {
-      res.json({ status: "Message Sent" });
+      res.json({ success: false, message: "Failed to register account" });
     }
   });
 });
 
-app.listen(8080,()=>{
-    console.log('Server is running...')
-})
+app.post("/login", (req, res) => {
+  const useremail = req.body.email;
+  const password = req.body.password;
+
+  const persistedUser = users.find((user) => {
+    const passphrase = bcrypt.compare(
+      password,
+      user.password,
+      function (error, results) {
+        if (results && user.email == useremail) {
+          const userLogin = {
+            useremail: users.email,
+          };
+          const token = jwt.sign({ user: userLogin }, "KEYBOARD CAT");
+          console.log(token);
+          res.json({ success: true, token: token });
+        } else {
+          res.json({ success: false, message: "Failed to login in!" });
+        }
+      }
+    );
+    // console.log(passphrase)
+    // return user.email==useremail &&
+  });
+
+  //   app.post("/contact", (req, res) => {
+  //     const { email } = req.body;
+  //     const { name } = req.body;
+  //     const { message } = req.body;
+  //     const mail = {
+  //       to: "zac@visitoceanair.com", // Change to your recipient
+  //       from: "info@visitoceanair.com", // Change to your verified sender
+  //       subject: `Message from ${email}${name}`,
+  //       text: message,
+  //       html: "<strong>and easy to do anywhere, even with Node.js</strong>",
+  //     };
+  //     res.json({ mail: mail });
+  //     // sgMail
+  //     //   .send(mail)
+  //     //   .then(() => {
+  //     //     console.log("Email sent");
+  //     //     res.json({ success: "email sent" });
+  //     //   })
+  //     //   .catch((error) => {
+  //     //     console.error(error);
+  //     //   });
+  //   });
+
+  // bcrypt.compare(password,users.password,function(error,results){
+  //     if(results){
+  //         console.log(results)
+  //         // const userLogin={
+  //         //     username:users.username
+  //         // }
+  //         // const token=jwt.sign({user:userLogin},'KEYBOARD CAT')
+  //         // console.log(token)
+  //         // res.json({success:true,message:'Successfully logged in!'})
+  //     }else{
+  //         res.json({success:false,message:'Failed to login in!'})
+  //     }
+  // })
+});
+
+// const contactEmail = nodemailer.createTransport({
+//   service: "SendGrid",
+//   auth: {
+//     user: "apikey",
+//     pass: "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",
+//   },
+// });
+
+app.listen(8080, () => {
+  console.log("Server is running...");
+});

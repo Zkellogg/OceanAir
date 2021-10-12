@@ -16,13 +16,13 @@ function Contact() {
     let response = await fetch("http://localhost:8080/contact", {
       method: "POST",
       headers: {
-        "Content-Type": "application/json;charset=utf-8",
+        "Content-Type": "application/json",
       },
       body: JSON.stringify(details),
     });
     setStatus("Submit");
     let result = await response.json();
-    alert(result.status);
+    alert("Thank you for contacting us! We will be back with you as soon as possible! ");
   };
 
   return (
