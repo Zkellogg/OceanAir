@@ -4,14 +4,14 @@ const jwt = require("jsonwebtoken");
 const cors = require("cors");
 const authenticate = require("./authentication/authenticate");
 global.bcrypt = require("bcryptjs");
-// const sgMail = require("@sendgrid/mail");
-// const { send } = require("@sendgrid/mail");
+const sgMail = require("@sendgrid/mail");
+const { send } = require("@sendgrid/mail");
 
 require("dotenv").config();
 
-// sgMail.setApiKey(
-//   "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"
-// );
+sgMail.setApiKey(
+  process.env.SENDGRID_API_KEY
+);
 
 app.use(cors());
 app.use(express.json());
@@ -38,15 +38,15 @@ app.post("/add-review",(req,res)=>{
     ${message}`,
   };
 
-//   sgMail
-//     .send(mail)
-//     .then(() => {
-//       console.log("Email sent");
-//       res.json({ success: "email sent" });
-//     })
-//     .catch((error) => {
-//       console.error(error);
-//     });
+  sgMail
+    .send(mail)
+    .then(() => {
+      console.log("Email sent");
+      res.json({ success: "email sent" });
+    })
+    .catch((error) => {
+      console.error(error);
+    });
 
     emails.push(mail)
     res.json({success:true,review:mail})
@@ -132,6 +132,7 @@ app.post("/login", (req, res) => {
     );
   });
 
+  //***Use with Database for encrypting passwords */
   // bcrypt.compare(password,users.password,function(error,results){
   //     if(results){
   //         console.log(results)
