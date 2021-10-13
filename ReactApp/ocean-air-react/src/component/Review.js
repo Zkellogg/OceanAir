@@ -1,15 +1,19 @@
 import React,{useState} from "react";
+import "../CSS/Review.css"
 
 function Review(){
     const [status, setStatus] = useState("Submit");
     const handleSubmit = async (e) => {
         e.preventDefault();
         setStatus("Sending...");
-        const { name, email, message } = e.target.elements;
+        const { location, name, rating, title, message, checkOutDate } = e.target.elements;
         let details = {
+          location: location.value,
           name: name.value,
-          email: email.value,
+          rating: rating.value,
+          title: title.value,
           message: message.value,
+          checkOutDate: checkOutDate.value
         };
     
         let response = await fetch("http://localhost:8080/contact", {
@@ -26,27 +30,38 @@ function Review(){
 
     return(
         <div className="PropertyDiv">
-            <h1 className="PropertyHeading">Seagrove Page</h1>
-            <div className="contact">
-                <h2><strong>Review:</strong></h2>
+            <div className="review">
+                <h2><strong>Enjoyed your stay?</strong></h2>
                 <form id="contact-form" onSubmit={handleSubmit}>
-                    <div className="form-group">
-                    <label htmlFor="name">
+                    <div className="form-group" id="review-name-div">
+                    <label htmlFor="name" id="name-textbox">
                         <strong>Name:</strong>
+                        <input type="text" className="form-control" id="name" required />
                     </label>
-                    <input type="text" className="form-control" id="name" required />
                     </div>
                     <div className="form-group">
                     <label htmlFor="name">
                         <strong>Location:</strong>
                     </label>
-                    <input ontype="text" autocomplete="on" className="form-control" id="location" required />
+                    <select name="location" id="location">
+                        <option value="Chivas">Chivas Apartment</option>
+                        <option value="Lower East">Lower East Private Beach</option>
+                        <option value="Upper East">Upper East Private Beach</option>
+                        <option value="Lower West">Lower West Private Beach</option>
+                        <option value="Upper West">Upper West Private Beach</option>
+                    </select>
                     </div>
                     <div className="form-group">
-                    <label htmlFor="rating">
-                        <strong>Rating:</strong>
-                    </label>
-                    <input type="number" min='1' max='5' className="form-control" id="email" required />
+                        <label htmlFor="rating">
+                            <strong>Rating:</strong>
+                        </label>
+                        <div class="rating">
+                            <input type="radio" name="rating" value="5" id="1"/><label className="star" for="1">☆</label>
+                            <input type="radio" name="rating" value="4" id="2"/><label for="2">☆</label>
+                            <input type="radio" name="rating" value="3" id="3"/><label for="3">☆</label>
+                            <input type="radio" name="rating" value="2" id="4"/><label for="4">☆</label>
+                            <input type="radio" name="rating" value="1" id="5"/><label for="5">☆</label>
+                        </div>
                     </div>
                     <div className="form-group">
                     <label htmlFor="message">
@@ -56,7 +71,7 @@ function Review(){
                     <label htmlFor="message">
                         <strong>Review:</strong>
                     </label>
-                    <textarea className="form-control" rows="5" id="message" required />
+                    <textarea className="form-control verbatim" rows="4" aria-required="true" placeholder="Enter your review here..." maxLength="1000" cols="20" data-localization="verbatim-placeholder" id="verbatim" required />
                     </div>
                     <button type="submit" className="btn btn-primary">
                     {status}

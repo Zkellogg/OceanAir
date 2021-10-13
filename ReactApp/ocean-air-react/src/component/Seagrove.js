@@ -3,9 +3,7 @@ import "../CSS/Property.css"
 
 function Seagrove(){
     return(
-        <div>
-            <h2>Seagrove Page</h2>
-        </div>
+        <h2>Seagrove Page</h2>
     )
 }
 
