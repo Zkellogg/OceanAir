@@ -31,44 +31,44 @@ function Review(){
     return(
         <div className="PropertyDiv">
             <div className="review">
-                <h2><strong>Enjoyed your stay?</strong></h2>
+                <h2 className="review-heading"><strong>Enjoyed your stay?</strong></h2>
                 <form id="contact-form" onSubmit={handleSubmit}>
                     <div className="form-group" id="review-name-div">
-                    <label htmlFor="name" id="name-textbox">
+                    <label htmlFor="name" id="review-label">
                         <strong>Name:</strong>
-                        <input type="text" className="form-control" id="name" required />
+                        <input type="name-textbox" className="form-control" id="review-textbox" required />
                     </label>
                     </div>
-                    <div className="form-group">
-                    <label htmlFor="name">
+                    <div className="form-group" id="review-name-div">
+                    <label htmlFor="name" id="review-label">
                         <strong>Location:</strong>
-                    </label>
-                    <select name="location" id="location">
+                        <select name="location" id="review-textbox">
                         <option value="Chivas">Chivas Apartment</option>
                         <option value="Lower East">Lower East Private Beach</option>
                         <option value="Upper East">Upper East Private Beach</option>
                         <option value="Lower West">Lower West Private Beach</option>
                         <option value="Upper West">Upper West Private Beach</option>
                     </select>
+                    </label>
                     </div>
-                    <div className="form-group">
-                        <label htmlFor="rating">
+                    <div className="form-group" id="review-name-div">
+                        <label htmlFor="rating" id="review-label">
                             <strong>Rating:</strong>
-                        </label>
-                        <div class="rating">
+                            <div class="rating" id="review-textbox">
                             <input type="radio" name="rating" value="5" id="1"/><label className="star" for="1">☆</label>
                             <input type="radio" name="rating" value="4" id="2"/><label for="2">☆</label>
                             <input type="radio" name="rating" value="3" id="3"/><label for="3">☆</label>
                             <input type="radio" name="rating" value="2" id="4"/><label for="4">☆</label>
                             <input type="radio" name="rating" value="1" id="5"/><label for="5">☆</label>
                         </div>
+                        </label>
                     </div>
                     <div className="form-group">
-                    <label htmlFor="message">
+                    <label htmlFor="message" id="review-label">
                         <strong>Title:</strong>
                     </label>
                     <input type="text" className="form-control" id="title" required />
-                    <label htmlFor="message">
+                    <label htmlFor="message" id="review-label">
                         <strong>Review:</strong>
                     </label>
                     <textarea className="form-control verbatim" rows="4" aria-required="true" placeholder="Enter your review here..." maxLength="1000" cols="20" data-localization="verbatim-placeholder" id="verbatim" required />

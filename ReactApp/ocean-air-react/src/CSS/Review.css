@@ -1,22 +1,32 @@
 .review{
     display: flex;
     flex-direction: column;
-    padding: 50px;
+    padding-top: 90px;
+    padding-bottom: 90px;
+    padding-left: 100px;
+    padding-right: 100px;
     background: linear-gradient(#738eab,#3a639b) ;
 }
 
-#name-textbox{
-    display: flex;
-    align-items: center;
-    width: 100%;
+.review-heading{
+    font-size: 3em;
 }
 
-#name{
-    width: 70%;
+#review-label{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+    font-size: 2em;
+}
+
+#review-textbox{
+    width: 75%;
 }
 
 #review-name-div{
     display: flex;
+    width: 35%;
 }
 
 /* Star Rating Section */
