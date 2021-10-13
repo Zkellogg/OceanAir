@@ -2,8 +2,9 @@
     display: flex;
     flex-direction: column;
     align-items: center;
-    justify-content: center;
+    justify-content: space-between;
     width: 100%;
+    height: 100vh;
 }
 
 .PropertyDiv{
@@ -11,5 +12,5 @@
 }
 
 .PropertyHeading{
-    font-size: 15rem;
+    font-size: 3rem;
 }
