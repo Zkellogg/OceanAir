@@ -63,6 +63,7 @@ function SignIn(props){
             body:JSON.stringify({
                 firstName:userSignUp.firstName,
                 lastName:userSignUp.lastName,
+                phone:userSignUp.phone,
                 email:userSignUp.email,
                 password:userSignUp.password
             })
@@ -97,11 +98,12 @@ function SignIn(props){
                 <div className="signUpDiv">
                 <div className="signUpHeading">
                     <h5>Sign Up</h5>
-                    <button type="button" class="btn-close" aria-label="Close"></button>
+                    <button type="button" className="btn-close" aria-label="Close"></button>
                 </div>
                 <div className="signUpTextBoxes">
                     <input type="text" placeholder="First name" onChange={handleOnChangeSignUp} name="firstName" required/>
                     <input type="text" placeholder="Last name" onChange={handleOnChangeSignUp} name="lastName" required/>
+                    <input type="text" placeholder="Phone Number" onChange={handleOnChangeSignUp} name="phone" required/>
                     <input type="text" placeholder="Email" onChange={handleOnChangeSignUp} name="email" required/>
                     <input type="password" placeholder="Password" onChange={handleOnChangeSignUp} name="password" required/>
                 </div>

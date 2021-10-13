@@ -17,8 +17,20 @@ app.use(cors());
 app.use(express.json());
 app.use(express.urlencoded());
 
-global.users = [];
-global.emails = [];
+// global.users = [];
+// global.emails = [];
+
+async function userRegister(user) {
+  await prisma.user.create({
+    data: {
+      firstName: user.firstName,
+      lastName: user.lastName,
+      email: user.email,
+      phone: user.phone,
+      password: user.password,
+    },
+  });
+}
 
 app.post("/add-review", (req, res) => {
   const { location } = req.body;
@@ -84,6 +96,8 @@ app.post("/register", (req, res) => {
   const password = req.body.password;
   const phone = req.body.phone;
 
+  console.log(firstName);
+
   bcrypt.genSalt(10, function (error, salt) {
     if (!error) {
       bcrypt.hash(password, salt, function (error, hash) {
@@ -95,8 +109,8 @@ app.post("/register", (req, res) => {
             phone: phone,
             password: hash,
           };
-          users.push(user);
-          console.log(users);
+          // async prisma querry
+          userRegister(user);
           res.json({
             success: "200",
             message: "Successfully registered account!",
@@ -111,44 +125,49 @@ app.post("/register", (req, res) => {
   });
 });
 
-app.post("/login", (req, res) => {
-  const useremail = req.body.email;
+app.post("/login", async (req, res) => {
+  const email = req.body.email;
   const password = req.body.password;
 
-  const persistedUser = users.find((user) => {
-    const passphrase = bcrypt.compare(
-      password,
-      user.password,
-      function (error, results) {
-        if (results && user.email == useremail) {
-          const userLogin = {
-            useremail: users.email,
-          };
-          const token = jwt.sign({ user: userLogin }, "KEYBOARD CAT");
-          console.log(token);
-          res.json({ success: true, token: token });
-        } else {
-          res.json({ success: false, message: "Failed to login in!" });
-        }
-      }
-    );
+  const foundUser = await prisma.user.findUnique({
+    where: { email: email },
   });
 
-  //***Use with Database for encrypting passwords */
-  // bcrypt.compare(password,users.password,function(error,results){
-  //     if(results){
-  //         console.log(results)
-  //         // const userLogin={
-  //         //     username:users.username
-  //         // }
-  //         // const token=jwt.sign({user:userLogin},'KEYBOARD CAT')
-  //         // console.log(token)
-  //         // res.json({success:true,message:'Successfully logged in!'})
-  //     }else{
-  //         res.json({success:false,message:'Failed to login in!'})
-  //     }
-  // })
+  // ***Use with Database for encrypting passwords */
+  bcrypt.compare(password, foundUser.password, function (error, results) {
+    if (results) {
+      console.log(results);
+      const token = jwt.sign({ email: foundUser.email }, "KEYBOARD CAT");
+      console.log(token);
+      res.json({
+        success: true,
+        message: "Successfully logged in!",
+        token: token,
+      });
+    } else {
+      res.json({ success: false, message: "Failed to login in!" });
+    }
+  });
 });
+
+//   const persistedUser = users.find((user) => {
+//     const passphrase = bcrypt.compare(
+//       password,
+//       user.password,
+//       function (error, results) {
+//         if (results && user.email == useremail) {
+//           const userLogin = {
+//             useremail: users.email,
+//           };
+//           const token = jwt.sign({ user: userLogin }, "KEYBOARD CAT");
+//           console.log(token);
+//           res.json({ success: true, token: token });
+//         } else {
+//           res.json({ success: false, message: "Failed to login in!" });
+//         }
+//       }
+//     );
+//   });
 
 app.listen(8080, () => {
   console.log("Server is running...");
