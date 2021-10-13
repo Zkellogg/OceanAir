@@ -10,6 +10,13 @@
     width: 100%;
 }
 
-.PropertyHeading{
-    font-size: 15rem;
+.PropertyHeading {
+    font-size: 6rem;
+    text-align: center;
+    margin-top: 51rem;
+}
+
+h2 {
+    margin-top: 13rem;
+    width: 100%;
 }
