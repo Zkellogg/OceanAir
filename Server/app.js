@@ -6,29 +6,29 @@ const authenticate = require("./authentication/authenticate");
 global.bcrypt = require("bcryptjs");
 const sgMail = require("@sendgrid/mail");
 const { send } = require("@sendgrid/mail");
+const { PrismaClient } = require("@prisma/client");
+const prisma = new PrismaClient();
 
 require("dotenv").config();
 
-sgMail.setApiKey(
-  process.env.SENDGRID_API_KEY
-);
+sgMail.setApiKey(process.env.SENDGRID_API_KEY);
 
 app.use(cors());
 app.use(express.json());
 app.use(express.urlencoded());
 
 global.users = [];
-global.emails=[];
+global.emails = [];
 
-app.post("/add-review",(req,res)=>{
-    const {location}=req.body;
-    const {name}=req.body.name;
-    const {rating}=parseInt(req.body);
-    const {title}=req.body;
-    const {message}=req.body;
-    const {dateStayed}=req.body;
-    
-    const mail = {
+app.post("/add-review", (req, res) => {
+  const { location } = req.body;
+  const { name } = req.body.name;
+  const { rating } = parseInt(req.body);
+  const { title } = req.body;
+  const { message } = req.body;
+  const { dateStayed } = req.body;
+
+  const mail = {
     to: "zac@visitoceanair.com", // Change to your recipient
     from: "info@visitoceanair.com", // Change to your verified sender
     subject: `Title: ${title} - Rating: ${rating}`,
@@ -48,9 +48,9 @@ app.post("/add-review",(req,res)=>{
       console.error(error);
     });
 
-    emails.push(mail)
-    res.json({success:true,review:mail})
-})
+  emails.push(mail);
+  res.json({ success: true, review: mail });
+});
 
 app.post("/contact", (req, res) => {
   const { email } = req.body;
@@ -82,6 +82,7 @@ app.post("/register", (req, res) => {
   const lastName = req.body.lastName;
   const email = req.body.email;
   const password = req.body.password;
+  const phone = req.body.phone;
 
   bcrypt.genSalt(10, function (error, salt) {
     if (!error) {
@@ -91,6 +92,7 @@ app.post("/register", (req, res) => {
             firstName: firstName,
             lastName: lastName,
             email: email,
+            phone: phone,
             password: hash,
           };
           users.push(user);
