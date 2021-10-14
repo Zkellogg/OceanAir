@@ -16,14 +16,14 @@ function Properties() {
           maecenas pharetra convallis posuere morbi leo urna molestie at elementum
           eu facilisis sed
         </p>
-       <h3 className="propertyPriceInfo">Price Description</h3>
-       <ul>
-           <li></li>
-           <li></li>
-           <li></li>
+       <h3 className="propertyPriceInfo">Price</h3>
+       <ul className="propertyPrice">
+           <li>$100</li>
+           <li>$200</li>
+           <li>$300</li>
        </ul>
         <h2 className="propertyFeatures">Property 1 features</h2>
-        <ul>
+        <ul className="propertyFeaturesItems">
             <li>item 1</li>
             <li>item 2</li>
             <li>item 3</li>
