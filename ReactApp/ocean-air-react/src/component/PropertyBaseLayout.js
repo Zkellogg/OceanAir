@@ -5,6 +5,7 @@ import "../CSS/Navbar.css"
 import "../CSS/Review.css"
 import Property from "./Property";
 
+
 function BaseLayoutProperty(props){
     return(
         <div className="BaseProperty-Container">

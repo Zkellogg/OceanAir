@@ -7,6 +7,7 @@ function Properties() {
         <h1>
           <strong>Property 1</strong>
         </h1>
+        <a type="button" value="Open Window" href= { window.open('https://oceanair.guestybookings.com/listings?city=Santa%20Rosa%20Beach') }><button id="bookNowBtn" className="bookNowBtn" >Book Now!</button></a>
         <h3> -property 1 Description- </h3>
         <h5>
           pellentesque habitant morbi tristique senectus et netus et malesuada

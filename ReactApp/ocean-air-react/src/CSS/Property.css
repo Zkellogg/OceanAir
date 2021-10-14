@@ -17,3 +17,10 @@
 .Property1{
     margin-top: 400px;
 }
+
+.bookNowBtn{
+    margin-left: 900px;
+    background: #4e72a1;
+    border-radius: 50px;
+    color: white;
+}
