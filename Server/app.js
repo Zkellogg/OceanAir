@@ -38,14 +38,14 @@ app.post("/add-review", (req, res) => {
   const { rating } = parseInt(req.body);
   const { title } = req.body;
   const { message } = req.body;
-  const { dateStayed } = req.body;
+  const { checkoutDate } = req.body;
 
   const mail = {
     to: "zac@visitoceanair.com", // Change to your recipient
     from: "info@visitoceanair.com", // Change to your verified sender
     subject: `Title: ${title} - Rating: ${rating}`,
     text: message,
-    html: `<strong>Review from: ${name} for ${location}, ${dateStayed} </strong><br>
+    html: `<strong>Review from: ${name} for ${location}, ${checkoutDate} </strong><br>
     ${title}<br>
     ${message}`,
   };

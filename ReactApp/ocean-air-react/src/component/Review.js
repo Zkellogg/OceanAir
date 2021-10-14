@@ -3,19 +3,18 @@ import "../CSS/Review.css"
 
 function Review(){
     const [status, setStatus] = useState("Submit");
+    const [details,setDetails]=useState({})
+
+    const handleOnChange=(e)=>{
+        setDetails({
+            ...details,
+            [e.target.name]:e.target.value
+        })
+    }
     const handleSubmit = async (e) => {
         e.preventDefault();
         setStatus("Sending...");
-        const { location, name, rating, title, message, checkOutDate } = e.target.elements;
-        let details = {
-          location: location.value,
-          name: name.value,
-          rating: rating.value,
-          title: title.value,
-          message: message.value,
-          checkOutDate: checkOutDate.value
-        };
-    
+
         let response = await fetch("http://localhost:8080/contact", {
           method: "POST",
           headers: {
@@ -32,46 +31,50 @@ function Review(){
         <div className="PropertyDiv">
             <div className="review">
                 <h2 className="review-heading"><strong>Enjoyed your stay?</strong></h2>
-                <form id="contact-form" onSubmit={handleSubmit}>
+                <form id="review-form" onSubmit={handleSubmit}>
                     <div className="form-group" id="review-name-div">
                     <label htmlFor="name" id="review-label">
-                        <strong>Name:</strong>
-                        <input type="name-textbox" className="form-control" id="review-textbox" required />
+                        <input onChange={handleOnChange} type="text" className="form-control" id="exampleFormControlInput1" placeholder="Name" name="name" required/>
+                    </label>
+                    </div>
+                    <div className="form-group" id="review-name-div">
+                    <label htmlFor="name" id="review-date">
+                        <strong>Checkout:</strong>
+                        <input onChange={handleOnChange} type="date" className="form-control" id="checkout-day-textbox" name="checkoutDate" required/>
                     </label>
                     </div>
                     <div className="form-group" id="review-name-div">
                     <label htmlFor="name" id="review-label">
-                        <strong>Location:</strong>
-                        <select name="location" id="review-textbox">
-                        <option value="Chivas">Chivas Apartment</option>
-                        <option value="Lower East">Lower East Private Beach</option>
-                        <option value="Upper East">Upper East Private Beach</option>
-                        <option value="Lower West">Lower West Private Beach</option>
-                        <option value="Upper West">Upper West Private Beach</option>
-                    </select>
+                        <div className="input-group">
+                        <select onChange={handleOnChange} className="form-control form-control-lg" name="location">
+                            <option value="" name="location">Where did you stay?</option>
+                            <option value="Chivas" name="location">Chivas Apartment</option>
+                            <option value="Upper East" name="location">Upper East Private Beach</option>
+                            <option value="Upper West" name="location">Upper West Private Beach</option>
+                            <option value="Lower East" name="location">Lower East Private Beach</option>
+                            <option value="Lower West" name="location">Lower West Private Beach</option>
+                        </select>
+                        </div>
                     </label>
                     </div>
                     <div className="form-group" id="review-name-div">
                         <label htmlFor="rating" id="review-label">
-                            <strong>Rating:</strong>
                             <div class="rating" id="review-textbox">
-                            <input type="radio" name="rating" value="5" id="1"/><label className="star" for="1">☆</label>
-                            <input type="radio" name="rating" value="4" id="2"/><label for="2">☆</label>
-                            <input type="radio" name="rating" value="3" id="3"/><label for="3">☆</label>
-                            <input type="radio" name="rating" value="2" id="4"/><label for="4">☆</label>
-                            <input type="radio" name="rating" value="1" id="5"/><label for="5">☆</label>
+                            <input onChange={handleOnChange} type="radio" name="rating" value="5" id="1" /><label className="star" for="1">☆</label>
+                            <input onChange={handleOnChange} type="radio" name="rating" value="4" id="2" /><label for="2">☆</label>
+                            <input onChange={handleOnChange} type="radio" name="rating" value="3" id="3" /><label for="3">☆</label>
+                            <input onChange={handleOnChange} type="radio" name="rating" value="2" id="4" /><label for="4">☆</label>
+                            <input onChange={handleOnChange} type="radio" name="rating" value="1" id="5" /><label for="5">☆</label>
                         </div>
                         </label>
                     </div>
-                    <div className="form-group">
+                    <div className="form-group" id="body-message">
                     <label htmlFor="message" id="review-label">
-                        <strong>Title:</strong>
+                    <input onChange={handleOnChange} type="text" class="form-control" id="exampleFormControlInput1" placeholder="Title" name="title"/>
                     </label>
-                    <input type="text" className="form-control" id="title" required />
                     <label htmlFor="message" id="review-label">
-                        <strong>Review:</strong>
+                    <textarea onChange={handleOnChange} className="form-control verbatim" rows="4" aria-required="true" placeholder="Enter your review here..." maxLength="1000" cols="20" data-localization="verbatim-placeholder" id="verbatim" name="message" required/>
                     </label>
-                    <textarea className="form-control verbatim" rows="4" aria-required="true" placeholder="Enter your review here..." maxLength="1000" cols="20" data-localization="verbatim-placeholder" id="verbatim" required />
                     </div>
                     <button type="submit" className="btn btn-primary">
                     {status}
