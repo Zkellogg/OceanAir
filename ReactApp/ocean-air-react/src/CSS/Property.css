@@ -17,3 +17,22 @@
 .Property1{
     margin-top: 400px;
 }
+
+.gallery{
+    width: 100%;
+}
+
+.reviewImages{
+    width: 100%;
+    
+    padding: 2rem;
+}
+.title{
+    margin-top: 13rem;
+    text-align: center;
+    font-size: xx-large;
+}
+.clickForMore{
+    text-align: center;
+    margin-top: -2rem;
+}
