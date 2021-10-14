@@ -15,7 +15,7 @@
     font-size: 15rem;
 }
 .Property1{
-    margin-top: 400px;
+    margin-top: -7rem;
 }
 
 .gallery{
@@ -24,7 +24,6 @@
 
 .reviewImages{
     width: 100%;
-    
     padding: 2rem;
 }
 .title{
@@ -33,6 +32,31 @@
     font-size: xx-large;
 }
 .clickForMore{
-    text-align: center;
+    margin: auto;
+    width: 72%;
     margin-top: -2rem;
 }
+
+.h2, h2 {
+    font-size: calc(1.325rem + .9vw);
+    text-align: -webkit-center;
+}
+
+p {
+    max-width: fit-content;
+    text-align: center;
+    padding: 1rem;
+}
+
+.h3, h3 {
+    font-size: calc(1.3rem + .6vw);
+    text-align: center;
+}
+
+@media only screen and (min-width: 1300px) {
+    .title{
+        margin-top: 16rem;
+        text-align: center;
+        font-size: xx-large;
+    }
+  }

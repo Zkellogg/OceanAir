@@ -31,7 +31,7 @@ export default function PictureGalleryComponent() {
           >
             
             {({ ref, open }) => (
-              <img ref={ref}  class="reviewImages" onClick={open} src={Image1} />
+              <img ref={ref}  class="reviewImages" onClick={open} src={Image1} alt={""} />
             )}
           </Item>
           <Item
@@ -41,7 +41,7 @@ export default function PictureGalleryComponent() {
       height="1000"
     >
       {({ ref, open }) => (
-        <img ref={ref} onClick={open} />
+        <img ref={ref} onClick={open} alt={""}/>
       )}
     </Item>
     <Item
@@ -51,7 +51,7 @@ export default function PictureGalleryComponent() {
       height="1000"
     >
       {({ ref, open }) => (
-        <img ref={ref} onClick={open} />
+        <img ref={ref} onClick={open} alt={""}/>
       )}
     </Item>
     <Item
@@ -61,7 +61,7 @@ export default function PictureGalleryComponent() {
       height="1000"
     >
       {({ ref, open }) => (
-        <img ref={ref} onClick={open} />
+        <img ref={ref} onClick={open} alt={""}/>
       )}
     </Item>
     <Item
@@ -71,7 +71,7 @@ export default function PictureGalleryComponent() {
       height="1000"
     >
       {({ ref, open }) => (
-        <img ref={ref} onClick={open} />
+        <img ref={ref} onClick={open} alt={""}/>
       )}
     </Item>
     
@@ -82,7 +82,7 @@ export default function PictureGalleryComponent() {
       height="1000"
     >
       {({ ref, open }) => (
-        <img ref={ref} onClick={open} />
+        <img ref={ref} onClick={open} alt={""}/>
       )}
     </Item>
     <Item
@@ -92,7 +92,7 @@ export default function PictureGalleryComponent() {
       height="1000"
     >
       {({ ref, open }) => (
-        <img ref={ref} onClick={open} />
+        <img ref={ref} onClick={open} alt={""}/>
       )}
     </Item>
     <Item
@@ -102,7 +102,7 @@ export default function PictureGalleryComponent() {
       height="1000"
     >
       {({ ref, open }) => (
-        <img ref={ref} onClick={open} />
+        <img ref={ref} onClick={open} alt={""}/>
       )}
     </Item>
     <Item
@@ -112,7 +112,7 @@ export default function PictureGalleryComponent() {
       height="1000"
     >
       {({ ref, open }) => (
-        <img ref={ref} onClick={open} />
+        <img ref={ref} onClick={open} alt={""}/>
       )}
     </Item>
     <Item
@@ -122,7 +122,7 @@ export default function PictureGalleryComponent() {
       height="1000"
     >
       {({ ref, open }) => (
-        <img ref={ref} onClick={open} />
+        <img ref={ref} onClick={open} alt={""}/>
       )}
     </Item>
     <Item
@@ -132,7 +132,7 @@ export default function PictureGalleryComponent() {
       height="1000"
     >
       {({ ref, open }) => (
-        <img ref={ref} onClick={open} />
+        <img ref={ref} onClick={open} alt={""}/>
       )}
     </Item>
     <Item
@@ -142,7 +142,7 @@ export default function PictureGalleryComponent() {
       height="1000"
     >
       {({ ref, open }) => (
-        <img ref={ref} onClick={open} />
+        <img ref={ref} onClick={open} alt={""}/>
       )}
     </Item>
     <Item
@@ -152,7 +152,7 @@ export default function PictureGalleryComponent() {
       height="1000"
     >
       {({ ref, open }) => (
-        <img ref={ref} onClick={open} />
+        <img ref={ref} onClick={open} alt={""}/>
       )}
     </Item>
         </Gallery> 

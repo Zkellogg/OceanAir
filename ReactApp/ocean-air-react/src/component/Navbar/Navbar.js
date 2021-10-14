@@ -43,7 +43,8 @@ function NavBarComp(props) {
               width="350rem"
               height="150rem"
               className="d-inline-block align-top"
-            />
+             alt="" 
+             />
           </Navbar.Brand>
           <Navbar.Toggle aria-controls="responsive-navbar-nav" />
           <Navbar.Collapse id="responsive-navbar-nav">
