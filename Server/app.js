@@ -34,11 +34,12 @@ async function userRegister(user) {
 
 app.post("/add-review", (req, res) => {
   const { location } = req.body;
-  const { name } = req.body.name;
-  const { rating } = parseInt(req.body);
+  const { name } = req.body;
+  const { rating } = req.body;
   const { title } = req.body;
   const { message } = req.body;
   const { checkoutDate } = req.body;
+
 
   const mail = {
     to: "zac@visitoceanair.com", // Change to your recipient
@@ -59,9 +60,6 @@ app.post("/add-review", (req, res) => {
     .catch((error) => {
       console.error(error);
     });
-
-  emails.push(mail);
-  res.json({ success: true, review: mail });
 });
 
 app.post("/contact", (req, res) => {

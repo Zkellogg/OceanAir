@@ -3,7 +3,7 @@
     display: flex;
     flex-direction: column;
     justify-content: space-between;
-    height: 35em;
+    height: 45em;
 }
 
 .review{
@@ -16,7 +16,17 @@
     background: linear-gradient(#738eab,#3a639b) ;
 }
 
+#review-heading-div{
+    display: flex;
+    align-items: center;
+}
+
+#review-stars{
+    margin-left: 5%;
+}
+
 .review-heading{
+    margin: 0;
     font-size: 3em;
 }
 
@@ -46,6 +56,12 @@
 
 #review-name-div{
     display: flex;
+}
+
+#review-location{
+    display: flex;
+    flex-direction: column;
+    font-size: 2em;
 }
 
 /* Star Rating Section */
@@ -90,7 +106,7 @@
     display: flex;
     flex-direction: column;
     justify-content: space-evenly;
-    height: 15em;
+    height: 20em;
 }
 
 h1{
@@ -101,21 +117,37 @@ h1 {
     margin-top: 150px
 }
 
+#review-button{
+    width: 16rem;
+}
+
+@media (min-width: 1024px) {
+    #review-message{
+        margin-right: 20rem;
+    }
+}
+
 @media only screen and (max-width: 600px) {
     h1 {
         font-size: 14px
     }
 }
 
+@media (max-width:895px) {
+    #review-heading-div{
+        flex-direction: column;
+        align-items: flex-start;
+    }
+    .review-heading{
+        font-size: 1.8em;
+    }
+}
+
 @media (min-width:320px) and (max-width:425px) {
     .review{
-        padding-top: 5rem;
-        padding-bottom: 5rem;
+        padding-top: 3rem;
+        padding-bottom: 10rem;
         padding-left: 2rem;
         padding-right: 2rem;
-    }
-
-    .review-heading{
-        font-size: 2.1rem;
     }
 }
