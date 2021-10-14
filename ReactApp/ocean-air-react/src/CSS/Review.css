@@ -1,3 +1,11 @@
+#review-form{
+    margin-top: 3em;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    height: 35em;
+}
+
 .review{
     display: flex;
     flex-direction: column;
@@ -20,13 +28,24 @@
     font-size: 2em;
 }
 
+#review-date{
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    width: 100%;
+    font-size: 1.5em;
+}
+
+#checkout-day-textbox{
+    max-width: 50%;
+}
+
 #review-textbox{
     width: 75%;
 }
 
 #review-name-div{
     display: flex;
-    width: 35%;
 }
 
 /* Star Rating Section */
@@ -67,6 +86,13 @@
     opacity: 0.4
 }
 
+#body-message{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    height: 15em;
+}
+
 h1{
     text-align: center
 }
@@ -82,5 +108,14 @@ h1 {
 }
 
 @media (min-width:320px) and (max-width:425px) {
-    
+    .review{
+        padding-top: 5rem;
+        padding-bottom: 5rem;
+        padding-left: 2rem;
+        padding-right: 2rem;
+    }
+
+    .review-heading{
+        font-size: 2.1rem;
+    }
 }
