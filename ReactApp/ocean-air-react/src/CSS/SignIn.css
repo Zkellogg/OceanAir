@@ -1,3 +1,15 @@
+#login-container{
+    display: flex;
+    align-items: flex-end;
+    height: 70vh;
+}
+
+#signup-container{
+    display: flex;
+    align-items: flex-end;
+    height: 75vh;
+}
+
 .signUpBackground{
     position: relative;
     top: 7rem;
