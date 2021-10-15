@@ -3,6 +3,7 @@ import ReactDOM from "react-dom";
 import { BrowserRouter, Switch, Route } from "react-router-dom";
 import "./index.css";
 import App from "./App";
+import MyAccount from "./component/MyAccount";
 import reportWebVitals from "./reportWebVitals";
 import {createStore} from 'redux'
 import { Provider } from "react-redux";
@@ -22,6 +23,7 @@ ReactDOM.render(
     <BrowserRouter>
       <Switch>
         <Route exact path="/" component={App}/>
+        <Route path="/myaccount" component={MyAccount}/>
         <BaseLayoutProperty>
           <Route path='/30A-Seagrove-Beach' component={Seagrove}/>
         </BaseLayoutProperty>

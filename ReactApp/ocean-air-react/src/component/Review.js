@@ -19,7 +19,7 @@ function Review(){
         let response = await fetch("http://localhost:8080/add-review", {
           method: "POST",
           headers: {
-            "Content-Type": "application/json",
+            Authorization:`jsonwebtoken ${localStorage.getItem('jsonwebtoken')}`
           },
           body: JSON.stringify(details),
         });

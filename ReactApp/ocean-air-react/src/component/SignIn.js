@@ -1,11 +1,13 @@
 import React,{useEffect, useState} from "react"
 import "../CSS/SignIn.css";
 import { connect } from "react-redux";
+import {useHistory} from "react-router"
 
 function SignIn(props){
     const [userSignIn,setUserSignIn]=useState({})
     const [userSignUp,setUserSignUp]=useState({})
     const [message,setMessage]=useState("")
+    const history=useHistory()
 
     const handleCloseDisplay=()=>{
         props.OnSignInClicked(false)
@@ -55,6 +57,7 @@ function SignIn(props){
         }).then(response=>response.json())
         .then(results=>{
             const token=localStorage.setItem('jsonwebtoken',results.token)
+            history.push('/myaccount')
             if(token){
                 setMessage({
                     message:results.message
