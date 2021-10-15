@@ -16,6 +16,10 @@ function NavBarComp(props) {
     }
   }
 
+  const handleSignOut=()=>{
+    localStorage.removeItem('jsonwebtoken')
+  }
+
   const handleSignUp=()=>{
     if(props.isSignUpClicked){
       props.OnSignUpClicked(false)
@@ -56,8 +60,8 @@ function NavBarComp(props) {
             <Nav>
               <Nav.Link href="#aboutUs">About Us</Nav.Link>
               {props.isAuth ? null:<Nav.Link onClick={handleSignIn} href="#login-container">Sign In</Nav.Link>}
-              {props.isAuth ? null :<Nav.Link onClick={handleSignUp} href="#signin-container">Sign Up</Nav.Link>}
-              {props.isAuth ? <Nav.Link href="/">Sign Out</Nav.Link>:null}
+              {props.isAuth ? null :<Nav.Link onClick={handleSignUp} href="#signup-container">Sign Up</Nav.Link>}
+              {props.isAuth ? <Nav.Link onClick={handleSignOut} href="/">Sign Out</Nav.Link>:null}
             </Nav>
           </Navbar.Collapse>
         </Container>
@@ -68,7 +72,7 @@ function NavBarComp(props) {
 
 const mapStateToProps=(state)=>{
   return{
-    isAuth:state.isAuth,
+    isAuth:state.isAuthen,
     isSignInClicked:state.isSignInActive,
     isSignUpClicked:state.isSignUpActive
   }
