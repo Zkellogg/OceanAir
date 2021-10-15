@@ -8,6 +8,19 @@
   height: 12vh;
 }
 
+.me-auto {
+  margin-right: auto!important;
+  font-size: 1.8rem;
+}
+
+.navbar-nav {
+  display: flex;
+  flex-direction: column;
+  padding-left: 0;
+  margin-bottom: 0;
+  font-size: 1.8rem;
+  list-style: none;
+}
 
 @media only screen and (max-width: 420px) {
   .navbar-toggler:focus {
