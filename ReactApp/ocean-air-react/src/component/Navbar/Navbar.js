@@ -43,7 +43,8 @@ function NavBarComp(props) {
               width="350rem"
               height="150rem"
               className="d-inline-block align-top"
-            />
+             alt="" 
+             />
           </Navbar.Brand>
           <Navbar.Toggle aria-controls="responsive-navbar-nav" />
           <Navbar.Collapse id="responsive-navbar-nav">
@@ -54,8 +55,8 @@ function NavBarComp(props) {
             </Nav>
             <Nav>
               <Nav.Link href="#aboutUs">About Us</Nav.Link>
-              {props.isAuth ? null:<Nav.Link onClick={handleSignIn} href="#">Sign In</Nav.Link>}
-              {props.isAuth ? null :<Nav.Link onClick={handleSignUp} href="#">Sign Up</Nav.Link>}
+              {props.isAuth ? null:<Nav.Link onClick={handleSignIn} href="#login-container">Sign In</Nav.Link>}
+              {props.isAuth ? null :<Nav.Link onClick={handleSignUp} href="#signin-container">Sign Up</Nav.Link>}
               {props.isAuth ? <Nav.Link href="/">Sign Out</Nav.Link>:null}
             </Nav>
           </Navbar.Collapse>

@@ -1,9 +1,19 @@
 import React from "react";
 import "../CSS/Property.css"
-
-function Seagrove(){
-    return(
-        <h2>Seagrove Page</h2>
+import PictureGalleryComponent from "../component/PictureGalleryComponent"
+function Seagrove() {
+    
+    
+    
+    return (
+        
+        <div>
+            <h2 class="title">Ocean Air on 30A</h2>
+            <PictureGalleryComponent />
+            <p class="clickForMore">Click image to view more images</p>
+            
+        </div>
+        
     )
 }
 

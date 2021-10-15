@@ -15,5 +15,97 @@
     font-size: 15rem;
 }
 .Property1{
-    margin-top: 400px;
+    margin-top: -7rem;
 }
+
+.gallery{
+    width: 100%;
+}
+
+.reviewImages{
+    width: 100%;
+    padding: 2rem;
+}
+.title{
+    margin-top: 13rem;
+    text-align: center;
+    font-size: xx-large;
+}
+.clickForMore{
+    margin: auto;
+    width: 100%;
+    margin-top: -2rem;
+}
+
+.propertyDescription {
+    font-size: calc(1.325rem + .9vw);
+    text-align: -webkit-center;
+    background: linear-gradient(#738eab, #3a639b);
+    color: white;
+}
+
+p {
+    max-width: fit-content;
+    text-align: center;
+    padding: 1rem;
+    font-size:  1.3rem;
+}
+
+.propertyPriceInfo {
+    font-size: calc(1.3rem + .6vw);
+    text-align: center;
+    background: linear-gradient(#738eab, #3a639b);
+    color: white;
+}
+
+.propertyPrice{
+    margin: auto;
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+    font-size: 2rem;
+    list-style-type: none;
+    text-align: center;
+    margin-right: 35px;
+}
+
+.propertyFeaturesItems{
+    text-align: center;
+    list-style-type: none;
+    margin-right: 35px;
+    font-size: 2rem;
+}
+.propertyFeatures{
+    background: linear-gradient(#738eab, #3a639b);
+    color: white;
+    text-align: center;
+}
+
+@media only screen and (min-width: 1300px) {
+    .title{
+        margin-top: 16rem;
+        text-align: center;
+        font-size: xx-large;
+    }
+    p {
+        max-width: fit-content;
+        text-align: center;
+        padding: 1rem;
+        font-size: 2rem;
+    }
+    .propertyPrice{
+        margin: auto;
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+    font-size: 2rem;
+    list-style-type: none;
+    text-align: center;
+    margin-right: 35px;
+    }
+
+    .propertyFeaturesItems{
+        text-align: center;
+        list-style-type: none;
+        margin-right: 35px;
+        font-size: 2rem;
+    }
+  }

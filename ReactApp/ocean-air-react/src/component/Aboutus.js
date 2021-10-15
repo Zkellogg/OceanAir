@@ -20,10 +20,10 @@ function Aboutus() {
         eu facilisis sed
       </h5>
       <div className="about-us-pics">
-        <img className="image1" src={image1} />
-        <img className="image2" src={image2} />
+        <img className="image1" src={image1} alt={image1} />
+        <img className="image2" src={image2} alt={image2} />
       </div>
-      <img className="image3" src={image3} />
+      <img className="image3" src={image3} alt={image3}/>
     </div>
   );
 }

@@ -7,12 +7,11 @@ const Home = (props) => {
   return (
     <div className="homepage-container">
       <div className="imageDiv">
-      <SignIn 
-      isSignInClicked={props.isSignInClicked}
-      isSignUpClicked={props.isSignUpClicked}
-      />
+        <SignIn 
+        isSignInClicked={props.isSignInClicked}
+        isSignUpClicked={props.isSignUpClicked}
+        />
       </div>
-      {/* <div id="aboutUs" className="aboutUs"></div> */}
     </div>
   );
 };

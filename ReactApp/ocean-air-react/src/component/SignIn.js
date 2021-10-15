@@ -6,6 +6,11 @@ function SignIn(props){
     const [userSignIn,setUserSignIn]=useState({})
     const [userSignUp,setUserSignUp]=useState({})
 
+    const handleCloseDisplay=()=>{
+        props.OnSignInClicked(false)
+        props.OnSignUpClicked(false)
+    }
+
     const handleSignIn=()=>{
         if(props.isSignInClicked){
             props.OnSignInClicked(false)
@@ -79,7 +84,7 @@ function SignIn(props){
             <div className="loginDiv">
                 <div className="loginHeading">
                     <h5>Sign In</h5>
-                    <button type="button" class="btn-close" aria-label="Close"></button>
+                    <button id="login-container" onClick={handleCloseDisplay} type="button" class="btn-close" aria-label="Close"></button>
                 </div>
                 <div className="loginTextBoxes">
                     <input type="text" placeholder="Email" onChange={handleOnChangeSignIn} name="email" required/>
@@ -98,9 +103,9 @@ function SignIn(props){
                 <div className="signUpDiv">
                 <div className="signUpHeading">
                     <h5>Sign Up</h5>
-                    <button type="button" className="btn-close" aria-label="Close"></button>
+                    <button onClick={handleCloseDisplay} type="button" className="btn-close" aria-label="Close"></button>
                 </div>
-                <div className="signUpTextBoxes">
+                <div className="signUpTextBoxes" id="signin-container">
                     <input type="text" placeholder="First name" onChange={handleOnChangeSignUp} name="firstName" required/>
                     <input type="text" placeholder="Last name" onChange={handleOnChangeSignUp} name="lastName" required/>
                     <input type="text" placeholder="Phone Number" onChange={handleOnChangeSignUp} name="phone" required/>
