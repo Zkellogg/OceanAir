@@ -16,16 +16,16 @@ function Review(){
         setStatus("Sending...");
 
         console.log(details)
-        // let response = await fetch("http://localhost:8080/add-review", {
-        //   method: "POST",
-        //   headers: {
-        //     "Content-Type": "application/json",
-        //   },
-        //   body: JSON.stringify(details),
-        // });
-        // setStatus("Submit");
-        // let result = await response.json();
-        // alert("Thank you for contacting us! We will be back with you as soon as possible! ");
+        let response = await fetch("http://localhost:8080/add-review", {
+          method: "POST",
+          headers: {
+            "Content-Type": "application/json",
+          },
+          body: JSON.stringify(details),
+        });
+        setStatus("Submit");
+        let result = await response.json();
+        alert("Thank you for contacting us! We will be back with you as soon as possible! ");
       };
 
     return(
