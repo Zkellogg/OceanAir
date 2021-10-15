@@ -84,7 +84,7 @@ function SignIn(props){
             <div className="loginDiv">
                 <div className="loginHeading">
                     <h5>Sign In</h5>
-                    <button onClick={handleCloseDisplay} type="button" class="btn-close" aria-label="Close"></button>
+                    <button id="login-container" onClick={handleCloseDisplay} type="button" class="btn-close" aria-label="Close"></button>
                 </div>
                 <div className="loginTextBoxes">
                     <input type="text" placeholder="Email" onChange={handleOnChangeSignIn} name="email" required/>
