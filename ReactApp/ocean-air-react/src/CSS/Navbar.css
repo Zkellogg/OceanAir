@@ -1,6 +1,7 @@
 .navbarMain {
   display: flex;
   background: linear-gradient(#738eab, #3a639b);
+  flex-flow: wrap;
 }
 
 .navbarMain img {

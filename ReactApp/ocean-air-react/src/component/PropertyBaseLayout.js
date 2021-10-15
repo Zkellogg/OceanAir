@@ -3,7 +3,7 @@ import Navbar from "./Navbar/Navbar";
 import Review from "./Review";
 import "../CSS/Navbar.css"
 import "../CSS/Review.css"
-import Property from "./Property";
+import SeaProperty from "./SeaProperty";
 
 
 function BaseLayoutProperty(props){
@@ -12,7 +12,7 @@ function BaseLayoutProperty(props){
             <Navbar/>
             <div>
             {props.children}
-            <Property />
+            <SeaProperty />
             </div>
             <Review/>
         </div>
