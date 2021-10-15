@@ -32,7 +32,7 @@ async function userRegister(user) {
   });
 }
 
-app.post("/add-review", (req, res) => {
+app.post("/add-review", authenticate,(req, res) => {
   const { location } = req.body;
   const { name } = req.body;
   const { rating } = req.body;

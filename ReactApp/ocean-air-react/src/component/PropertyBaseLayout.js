@@ -4,6 +4,7 @@ import Review from "./Review";
 import "../CSS/Navbar.css"
 import "../CSS/Review.css"
 import Property from "./Property";
+import {connect} from "react-redux"
 
 function BaseLayoutProperty(props){
     return(
@@ -13,9 +14,15 @@ function BaseLayoutProperty(props){
             {props.children}
             <Property />
             </div>
-            <Review/>
+            {props.isAuth? <Review/>:null}
         </div>
     )
 }
 
-export default BaseLayoutProperty
+const mapStateToProps=(state)=>{
+    return{
+      isAuth:state.isAuthen
+    }
+}
+
+export default connect(mapStateToProps)(BaseLayoutProperty)

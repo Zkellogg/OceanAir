@@ -5,8 +5,10 @@ import Container from "react-bootstrap/Container";
 import logo from "../../images/OceanAirLogoB_Locations_600x200.png";
 import "../../CSS/Navbar.css";
 import { connect } from "react-redux";
+import {useHistory} from "react-router"
 
 function NavBarComp(props) {
+  const history=useHistory()
 
   const handleSignIn=()=>{
     if(props.isSignInClicked){
@@ -61,6 +63,7 @@ function NavBarComp(props) {
               <Nav.Link href="#aboutUs">About Us</Nav.Link>
               {props.isAuth ? null:<Nav.Link onClick={handleSignIn} href="#login-container">Sign In</Nav.Link>}
               {props.isAuth ? null :<Nav.Link onClick={handleSignUp} href="#signup-container">Sign Up</Nav.Link>}
+              {props.isAuth ? <Nav.Link href="/myaccount">My Account</Nav.Link>:null}
               {props.isAuth ? <Nav.Link onClick={handleSignOut} href="/">Sign Out</Nav.Link>:null}
             </Nav>
           </Navbar.Collapse>

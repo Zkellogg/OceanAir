@@ -7,8 +7,7 @@ function authenticate(req,res,next){
         const token=headers.split(' ')[1]
         const decodedToken=jwt.verify(token,'KEYBOARD CAT')
         if(decodedToken){
-            console.log('Inside DecodedToken')
-            console.log(decodedToken)
+            next()
         }else{
             res.json({success:false,message:'Failed to retrive token!'})
         }
