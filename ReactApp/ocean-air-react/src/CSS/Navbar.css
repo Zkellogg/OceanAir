@@ -6,6 +6,11 @@
 .navbarMain img {
   width: 45vh;
   height: 12vh;
+  margin-left: -15rem;
+}
+
+.navbarMain Nav.Link {
+  margin: 5px
 }
 
 
@@ -14,6 +19,7 @@
     text-decoration: none;
     
  }
+
  .navbar-dark .navbar-toggler {
   width: 100%;
 }
@@ -22,5 +28,13 @@
   flex-grow: 1;
   align-items: center;
   text-align: center;
+}
+}
+
+@media only screen and (max-width: 1630px) {
+.navbarMain img {
+  width: 45vh;
+  height: 12vh;
+  margin-left: 0%;
 }
 }
