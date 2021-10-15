@@ -4,13 +4,15 @@ import Navbar from "../src/component/Navbar/Navbar";
 import Home from "./component/Home";
 import Aboutus from "./component/Aboutus";
 import Contact from "./component/Contact";
+import HomeProperties from "./component/HomeProperties";
 
 function App() {
   return (
     <div>
       <Navbar />
       <Home />
-      <Aboutus />
+      <HomeProperties />
+      {/* <Aboutus /> */}
       <Contact />
     </div>
   );
