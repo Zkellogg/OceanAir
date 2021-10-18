@@ -7,6 +7,12 @@
     height: 100vh;
 }
 
+#BaseProperty-div{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
 .PropertyDiv{
     width: 100%;
 }

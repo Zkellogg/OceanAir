@@ -1,12 +1,11 @@
 import React from "react";
+import {connect}from "react-redux"
 import "../CSS/Property.css";
 import Button from 'react-bootstrap/Button';
 
-function Properties() {
+function Properties(props) {
     return (
-      
       <div className="Property1">
-        
         <h1>
           <title className="propertyTitle">Property 1</title>
         </h1>
@@ -38,5 +37,12 @@ function Properties() {
       </div>
     );
   }
+
+  const mapStateToProps = (state) => {
+    return {
+        isSignInClicked: state.isSignInActive,
+        isSignUpClicked: state.isSignUpActive
+    }
+}
   
-  export default Properties;
+  export default connect(mapStateToProps)(Properties);

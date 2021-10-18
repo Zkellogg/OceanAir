@@ -1,23 +1,14 @@
 #login-container{
+    position: fixed;
     display: flex;
-    align-items: flex-end;
-    height: 70vh;
+    align-items: center;
+    justify-content: center;
+    top: 20em;
 }
 
 #signup-container{
     display: flex;
     align-items: flex-end;
-    height: 75vh;
-}
-
-.signUpBackground{
-    position: relative;
-    top: 7rem;
-}
-
-.loginBackground{
-    position: relative;
-    top: 4rem;
 }
 
 .loginDiv{
