@@ -4,14 +4,14 @@ import Navbar from "../src/component/Navbar/Navbar";
 import Home from "./component/Home";
 import Aboutus from "./component/Aboutus";
 import Contact from "./component/Contact";
-import HomeProperties from "./component/HomeProperties";
+import PropertyCards from "./component/PropertyCards";
 
 function App() {
   return (
     <div>
       <Navbar />
       <Home />
-      <HomeProperties />
+      <PropertyCards />
       {/* <Aboutus /> */}
       <Contact />
     </div>

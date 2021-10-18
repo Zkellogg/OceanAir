@@ -1,5 +1,5 @@
 import React from "react";
-import "../CSS/HomeProperties.css";
+import "../CSS/PropertyCards.css";
 import srPic from "../images/48B7B236-7321-4D26-9057-909BCA5BCC17.JPG";
 import pbPic from "../images/pompano/pomp2.jpg";
 import mbPic from "../images/myrtle/myrt1.jpg";
