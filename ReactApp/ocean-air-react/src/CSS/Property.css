@@ -1,189 +1,204 @@
-.BaseProperty-Container{
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: space-between;
-    width: 100%;
-    height: 100vh;
+body {
+  background: none;
+  border-image-repeat: round;
 }
 
-.PropertyDiv{
-    width: 100%;
+.BaseProperty-Container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+  height: 100vh;
 }
 
-.PropertyHeading{
-    font-size: 15rem;
-}
-.Property1{
-    margin-top: -7rem;
+.PropertyDiv {
+  width: 100%;
 }
 
-.gallery{
-    width: 100%;
+.PropertyHeading {
+  font-size: 15rem;
+}
+.Property1 {
+  margin-top: -7rem;
 }
 
-.reviewImages{
-    width: 100%;
-    padding: 2rem;
+.gallery {
+  width: 100%;
 }
-.title{
-    margin-top: 13rem;
-    text-align: center;
-    font-size: xx-large;
+
+.reviewImages {
+  width: 100%;
+  padding: 2rem;
 }
-.clickForMore{
-    margin: auto;
-    width: 100%;
-    margin-top: -2rem;
+
+.reviewImages:hover {
+  width: 100%;
+  padding: 2rem;
+  transform: scale(1.01);
+  box-shadow: 0px 0px 10px 0px;
+}
+
+.title {
+  margin-top: 13rem;
+  text-align: center;
+  font-size: xx-large;
+}
+.clickForMore {
+  margin: auto;
+  width: 100%;
+  margin-top: -2rem;
 }
 
 .propertyDescription {
-    font-size: calc(1.325rem + .9vw);
-    text-align: center;
-    background: linear-gradient(#738eab, #3a639b);
-    color: white;
+  font-size: calc(1.325rem + 0.9vw);
+  text-align: center;
+  background: linear-gradient(#738eab, #3a639b);
+  color: white;
 }
 
 p {
-    max-width: fit-content;
-    text-align: center;
-    padding: 1rem;
-    font-size:  1.3rem;
+  max-width: fit-content;
+  text-align: center;
+  padding: 1rem;
+  font-size: 1.3rem;
 }
 
 .propertyPriceInfo {
-    font-size: calc(1.3rem + .6vw);
-    text-align: center;
-    background: linear-gradient(#738eab, #3a639b);
-    color: white;
+  font-size: calc(1.3rem + 0.6vw);
+  text-align: center;
+  background: linear-gradient(#738eab, #3a639b);
+  color: white;
 }
 
-.propertyPrice{
-    margin: auto;
-    margin-top: 1rem;
-    margin-bottom: 1rem;
-    font-size: 2rem;
-    list-style-type: none;
-    text-align: center;
-    margin-right: 35px;
+.propertyPrice {
+  margin: auto;
+  margin-top: 1rem;
+  margin-bottom: 1rem;
+  font-size: 2rem;
+  list-style-type: none;
+  text-align: center;
+  margin-right: 35px;
 }
 
-.propertyFeaturesItems{
-    text-align: center;
-    list-style-type: none;
-    margin-right: 35px;
-    font-size: 2rem;
+.propertyFeaturesItems {
+  text-align: center;
+  list-style-type: none;
+  margin-right: 35px;
+  font-size: 2rem;
 }
-.propertyFeatures{
-    background: linear-gradient(#738eab, #3a639b);
-    color: white;
-    text-align: center;
+.propertyFeatures {
+  background: linear-gradient(#738eab, #3a639b);
+  color: white;
+  text-align: center;
 }
 
-.bookNowButton{
-    margin: auto;
+.bookNowButton {
+  margin: auto;
 }
 
 @media only screen and (min-width: 1300px) {
-    .title{
-        margin-top: 16rem;
-        text-align: center;
-        font-size: xx-large;
-    }
-    p {
-        max-width: fit-content;
-        text-align: center;
-        padding: 1rem;
-        font-size: 2rem;
-    }
-    .propertyPrice{
-        margin: auto;
+  .title {
+    margin-top: 10rem;
+    text-align: center;
+    font-size: xx-large;
+  }
+  p {
+    max-width: fit-content;
+    text-align: center;
+    padding: 1rem;
+    font-size: 2rem;
+  }
+  .propertyPrice {
+    margin: auto;
     margin-top: 1rem;
     margin-bottom: 1rem;
     font-size: 2rem;
     list-style-type: none;
     text-align: center;
     margin-right: 35px;
-    }
-
-    .propertyFeaturesItems{
-        text-align: center;
-        list-style-type: none;
-        margin-right: 35px;
-        font-size: 2rem;
-    }
-    .reviewImages {
-        width: 100%;
-        padding: 2rem;
-        max-width: max-content;
-        display: flex;
-        align-content: center;
-        margin: auto;
-            margin-left: auto;
-        margin-left: auto;
-        align-content: center;
-        display: flex;
-        margin-right: auto;
-    }
-    .Property1 {
-        margin-top: -7rem;
-        max-width: 54rem;
-    }
   }
-  @media screen 
-  and (min-device-width: 810px) 
-  and (max-device-width: 1250px) 
-  and (-webkit-min-device-pixel-ratio: 1) { 
-    .title{
-        margin-top: 16rem;
-        text-align: center;
-        font-size: xx-large;
-    }
-    p {
-        max-width: fit-content;
-        text-align: center;
-        padding: 1rem;
-        font-size: 2rem;
-    }
-    .propertyPrice{
-        margin: auto;
+
+  .propertyFeaturesItems {
+    text-align: center;
+    list-style-type: none;
+    margin-right: 35px;
+    font-size: 2rem;
+  }
+  .reviewImages {
+    width: 100%;
+    padding: 2rem;
+    max-width: max-content;
+    display: flex;
+    align-content: center;
+    margin: auto;
+    margin-left: auto;
+    margin-left: auto;
+    align-content: center;
+    display: flex;
+    margin-right: auto;
+  }
+  .Property1 {
+    margin-top: -7rem;
+    max-width: 54rem;
+  }
+}
+@media screen and (min-device-width: 810px) and (max-device-width: 1250px) and (-webkit-min-device-pixel-ratio: 1) {
+  .title {
+    margin-top: 16rem;
+    text-align: center;
+    font-size: xx-large;
+  }
+  p {
+    max-width: fit-content;
+    text-align: center;
+    padding: 1rem;
+    font-size: 2rem;
+  }
+  .propertyPrice {
+    margin: auto;
     margin-top: 1rem;
     margin-bottom: 1rem;
     font-size: 2rem;
     list-style-type: none;
     text-align: center;
     margin-right: 35px;
-    }
-
-    .propertyFeaturesItems{
-        text-align: center;
-        list-style-type: none;
-        margin-right: 35px;
-        font-size: 2rem;
-    }
-    .reviewImages {
-        width: 100%;
-        padding: 2rem;
-        max-width: max-content;
-        display: flex;
-        align-content: center;
-        margin: auto;
-            margin-left: auto;
-        margin-left: auto;
-        align-content: center;
-        display: flex;
-        margin-right: auto;
-    }
-    .Property1 {
-        margin-top: -7rem;
-        max-width: 54rem;
-    }
-    .navbar>.container, .navbar>.container-fluid, .navbar>.container-lg, .navbar>.container-md, .navbar>.container-sm, .navbar>.container-xl, .navbar>.container-xxl {
-        display: flex;
-        flex-wrap: inherit;
-        margin-left: -6rem;
-        align-items: center;
-        justify-content: space-between;
-    }
   }
- 
+
+  .propertyFeaturesItems {
+    text-align: center;
+    list-style-type: none;
+    margin-right: 35px;
+    font-size: 2rem;
+  }
+  .reviewImages {
+    width: 100%;
+    padding: 2rem;
+    max-width: max-content;
+    display: flex;
+    align-content: center;
+    margin: auto;
+    margin-left: auto;
+    margin-left: auto;
+    align-content: center;
+    display: flex;
+    margin-right: auto;
+  }
+  .Property1 {
+    margin-top: -7rem;
+    max-width: 54rem;
+  }
+  .navbar > .container,
+  .navbar > .container-fluid,
+  .navbar > .container-lg,
+  .navbar > .container-md,
+  .navbar > .container-sm,
+  .navbar > .container-xl,
+  .navbar > .container-xxl {
+    display: flex;
+    flex-wrap: inherit;
+    margin-left: -6rem;
+    align-items: center;
+    justify-content: space-between;
+  }
+}
