@@ -57,7 +57,7 @@
 
 @media only screen and (min-width: 1024px) {
   .imageDiv {
-    height: 86rem;
+    height: 65rem;
     width: 100%;
     background-image: url(../images/mobilechair.jpeg);
     background-repeat: no-repeat;

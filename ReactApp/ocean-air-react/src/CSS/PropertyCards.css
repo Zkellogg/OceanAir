@@ -6,13 +6,23 @@
   align-items: center;
 }
 
+@media only screen and (max-width: 786px) {
+  .card-div {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+}
+
 .card-container {
   width: 300px;
   overflow: hidden;
   box-shadow: 0px 0px 15px -5px;
   transition: 0.5s;
   animation: ease-in;
-  margin: 3rem 4rem 3rem 0rem;
+  margin: 3rem 4rem 3rem 3rem;
   background-color: #ffffffcc;
   text-align: center;
 }

@@ -5,6 +5,7 @@ import Home from "./component/Home";
 import Aboutus from "./component/Aboutus";
 import Contact from "./component/Contact";
 import PropertyCards from "./component/PropertyCards";
+import Footer from "./component/Footer";
 
 function App() {
   return (
@@ -14,6 +15,7 @@ function App() {
       <PropertyCards />
       {/* <Aboutus /> */}
       <Contact />
+      <Footer />
     </div>
   );
 }
