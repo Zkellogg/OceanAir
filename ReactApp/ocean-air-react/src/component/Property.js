@@ -1,9 +1,12 @@
 import React from "react";
 import "../CSS/Property.css";
+import Button from 'react-bootstrap/Button';
 
 function Properties() {
     return (
+      
       <div className="Property1">
+        
         <h1>
           <title className="propertyTitle">Property 1</title>
         </h1>
@@ -16,6 +19,7 @@ function Properties() {
           maecenas pharetra convallis posuere morbi leo urna molestie at elementum
           eu facilisis sed
         </p>
+        
        <h3 className="propertyPriceInfo">Price</h3>
        <ul className="propertyPrice">
            <li>$100</li>
