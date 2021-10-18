@@ -39,7 +39,7 @@
 
 .propertyDescription {
     font-size: calc(1.325rem + .9vw);
-    text-align: -webkit-center;
+    text-align: center;
     background: linear-gradient(#738eab, #3a639b);
     color: white;
 }
@@ -80,6 +80,10 @@ p {
     text-align: center;
 }
 
+.bookNowButton{
+    margin: auto;
+}
+
 @media only screen and (min-width: 1300px) {
     .title{
         margin-top: 16rem;
@@ -108,4 +112,78 @@ p {
         margin-right: 35px;
         font-size: 2rem;
     }
+    .reviewImages {
+        width: 100%;
+        padding: 2rem;
+        max-width: max-content;
+        display: flex;
+        align-content: center;
+        margin: auto;
+            margin-left: auto;
+        margin-left: auto;
+        align-content: center;
+        display: flex;
+        margin-right: auto;
+    }
+    .Property1 {
+        margin-top: -7rem;
+        max-width: 54rem;
+    }
   }
+  @media screen 
+  and (min-device-width: 810px) 
+  and (max-device-width: 1250px) 
+  and (-webkit-min-device-pixel-ratio: 1) { 
+    .title{
+        margin-top: 16rem;
+        text-align: center;
+        font-size: xx-large;
+    }
+    p {
+        max-width: fit-content;
+        text-align: center;
+        padding: 1rem;
+        font-size: 2rem;
+    }
+    .propertyPrice{
+        margin: auto;
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+    font-size: 2rem;
+    list-style-type: none;
+    text-align: center;
+    margin-right: 35px;
+    }
+
+    .propertyFeaturesItems{
+        text-align: center;
+        list-style-type: none;
+        margin-right: 35px;
+        font-size: 2rem;
+    }
+    .reviewImages {
+        width: 100%;
+        padding: 2rem;
+        max-width: max-content;
+        display: flex;
+        align-content: center;
+        margin: auto;
+            margin-left: auto;
+        margin-left: auto;
+        align-content: center;
+        display: flex;
+        margin-right: auto;
+    }
+    .Property1 {
+        margin-top: -7rem;
+        max-width: 54rem;
+    }
+    .navbar>.container, .navbar>.container-fluid, .navbar>.container-lg, .navbar>.container-md, .navbar>.container-sm, .navbar>.container-xl, .navbar>.container-xxl {
+        display: flex;
+        flex-wrap: inherit;
+        margin-left: -6rem;
+        align-items: center;
+        justify-content: space-between;
+    }
+  }
+ 
