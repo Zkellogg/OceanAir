@@ -5,30 +5,30 @@ import Container from "react-bootstrap/Container";
 import logo from "../../images/OceanAirLogoB_Locations_600x200.png";
 import "../../CSS/Navbar.css";
 import { connect } from "react-redux";
-import {useHistory} from "react-router"
+import { useHistory } from "react-router";
 
 function NavBarComp(props) {
-  const history=useHistory()
+  const history = useHistory();
 
-  const handleSignIn=()=>{
-    if(props.isSignInClicked){
-      props.OnSignInClicked(false)
-    }else{
-      props.OnSignInClicked(true)
+  const handleSignIn = () => {
+    if (props.isSignInClicked) {
+      props.OnSignInClicked(false);
+    } else {
+      props.OnSignInClicked(true);
     }
-  }
+  };
 
-  const handleSignOut=()=>{
-    localStorage.removeItem('jsonwebtoken')
-  }
+  const handleSignOut = () => {
+    localStorage.removeItem("jsonwebtoken");
+  };
 
-  const handleSignUp=()=>{
-    if(props.isSignUpClicked){
-      props.OnSignUpClicked(false)
-    }else{
-      props.OnSignUpClicked(true)
+  const handleSignUp = () => {
+    if (props.isSignUpClicked) {
+      props.OnSignUpClicked(false);
+    } else {
+      props.OnSignUpClicked(true);
     }
-  }
+  };
 
   return (
     <div>
@@ -49,22 +49,42 @@ function NavBarComp(props) {
               width="350rem"
               height="150rem"
               className="d-inline-block align-top"
-             alt="" 
-             />
+              alt=""
+            />
           </Navbar.Brand>
           <Navbar.Toggle aria-controls="responsive-navbar-nav" />
           <Navbar.Collapse id="responsive-navbar-nav">
             <Nav className="me-auto">
-              <Nav.Link href="/30A-Seagrove-Beach">30A Seagrove Beach, FL</Nav.Link>
-              <Nav.Link href="https://oceanair.guestybookings.com/listings/5fa03839d8c9cd002f4a90e6">Pompano Beach, FL</Nav.Link>
-              <Nav.Link href="https://oceanair.guestybookings.com/listings/5fc519821b8cf2002f1dbf83">Myrtle Beach , SC</Nav.Link>
+              <Nav.Link href="/30A-Seagrove-Beach">
+                30A Seagrove Beach, FL
+              </Nav.Link>
+              <Nav.Link href="https://oceanair.guestybookings.com/listings/5fa03839d8c9cd002f4a90e6">
+                Pompano Beach, FL
+              </Nav.Link>
+              <Nav.Link href="https://oceanair.guestybookings.com/listings/5fc519821b8cf2002f1dbf83">
+                Myrtle Beach , SC
+              </Nav.Link>
             </Nav>
             <Nav>
-              <Nav.Link href="#aboutUs">About Us</Nav.Link>
-              {props.isAuth ? null:<Nav.Link onClick={handleSignIn} href="#login-container">Sign In</Nav.Link>}
-              {props.isAuth ? null :<Nav.Link onClick={handleSignUp} href="#signup-container">Sign Up</Nav.Link>}
-              {props.isAuth ? <Nav.Link href="/myaccount">My Account</Nav.Link>:null}
-              {props.isAuth ? <Nav.Link onClick={handleSignOut} href="/">Sign Out</Nav.Link>:null}
+              {/* <Nav.Link href="#aboutUs">About Us</Nav.Link> */}
+              {props.isAuth ? null : (
+                <Nav.Link onClick={handleSignIn} href="#login-container">
+                  Sign In
+                </Nav.Link>
+              )}
+              {props.isAuth ? null : (
+                <Nav.Link onClick={handleSignUp} href="#signup-container">
+                  Sign Up
+                </Nav.Link>
+              )}
+              {props.isAuth ? (
+                <Nav.Link href="/myaccount">My Account</Nav.Link>
+              ) : null}
+              {props.isAuth ? (
+                <Nav.Link onClick={handleSignOut} href="/">
+                  Sign Out
+                </Nav.Link>
+              ) : null}
             </Nav>
           </Navbar.Collapse>
         </Container>
@@ -73,19 +93,21 @@ function NavBarComp(props) {
   );
 }
 
-const mapStateToProps=(state)=>{
-  return{
-    isAuth:state.isAuthen,
-    isSignInClicked:state.isSignInActive,
-    isSignUpClicked:state.isSignUpActive
-  }
-}
+const mapStateToProps = (state) => {
+  return {
+    isAuth: state.isAuthen,
+    isSignInClicked: state.isSignInActive,
+    isSignUpClicked: state.isSignUpActive,
+  };
+};
 
-const mapDispatchToProps=(dispatch)=>{
-  return{
-    OnSignInClicked:(isClicked)=>dispatch({type:'ON_SIGNINBTN_CLICKED',payload:isClicked}),
-    OnSignUpClicked:(isClicked)=>dispatch({type:'ON_SIGNUPBTN_CLICKED',payload:isClicked})
-  }
-}
+const mapDispatchToProps = (dispatch) => {
+  return {
+    OnSignInClicked: (isClicked) =>
+      dispatch({ type: "ON_SIGNINBTN_CLICKED", payload: isClicked }),
+    OnSignUpClicked: (isClicked) =>
+      dispatch({ type: "ON_SIGNUPBTN_CLICKED", payload: isClicked }),
+  };
+};
 
-export default connect(mapStateToProps,mapDispatchToProps)(NavBarComp);
+export default connect(mapStateToProps, mapDispatchToProps)(NavBarComp);
