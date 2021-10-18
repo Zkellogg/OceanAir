@@ -1,9 +1,3 @@
-body {
-  background: none;
-  border-image-repeat: round;
-}
-
-<<<<<<< HEAD
 .BaseProperty-Container {
   display: flex;
   flex-direction: column;
@@ -11,16 +5,12 @@ body {
   justify-content: space-between;
   width: 100%;
   height: 100vh;
-=======
-#BaseProperty-div{
-    display: flex;
-    flex-direction: column;
-    align-items: center;
 }
 
-.PropertyDiv{
-    width: 100%;
->>>>>>> bc675bf43988bbc5912c25103d47ff92b417ab90
+#BaseProperty-div {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 
 .PropertyDiv {
