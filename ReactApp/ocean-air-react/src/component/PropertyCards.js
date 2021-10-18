@@ -13,15 +13,15 @@ function HomeProperties() {
         </div>
         <div className="card-content">
           <div className="card-title">
-            <h3>Text</h3>
+            <h3>Chivas on 30A</h3>
           </div>
-          <div className="card-body">
+          {/* <div className="card-body">
             <p>Tetx123</p>
-          </div>
+          </div> */}
         </div>
         <div className="btn">
           <button>
-            <a>Seagrove / 30A</a>
+            <a href="/30A-Seagrove-Beach">More info</a>
           </button>
         </div>
       </div>
@@ -31,15 +31,15 @@ function HomeProperties() {
         </div>
         <div className="card-content">
           <div className="card-title">
-            <h3>Text</h3>
+            <h3>Pompano Beach</h3>
           </div>
-          <div className="card-body">
+          {/* <div className="card-body">
             <p>Tetx123</p>
-          </div>
+          </div> */}
         </div>
         <div className="btn">
           <button>
-            <a>Seagrove / 30A</a>
+            <a>More Info</a>
           </button>
         </div>
       </div>
@@ -49,15 +49,15 @@ function HomeProperties() {
         </div>
         <div className="card-content">
           <div className="card-title">
-            <h3>Text</h3>
+            <h3>Myrtle Beach</h3>
           </div>
-          <div className="card-body">
+          {/* <div className="card-body">
             <p>Tetx123</p>
-          </div>
+          </div> */}
         </div>
         <div className="btn">
           <button>
-            <a>Seagrove / 30A</a>
+            <a>More Info</a>
           </button>
         </div>
       </div>

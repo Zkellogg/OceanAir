@@ -74,3 +74,10 @@ a {
   text-decoration: none;
   font-weight: bold;
 }
+
+a:visited {
+  text-transform: uppercase;
+  color: black;
+  text-decoration: none;
+  font-weight: bold;
+}
