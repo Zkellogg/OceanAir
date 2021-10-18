@@ -1,4 +1,7 @@
 body {
-  background: linear-gradient(#fff, #aabfdb);
   font-family: poppins;
+}
+
+.appDiv {
+  background: linear-gradient(#fff, #aabfdb);
 }
