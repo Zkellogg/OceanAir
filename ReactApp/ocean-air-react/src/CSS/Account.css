@@ -2,24 +2,27 @@
     display: flex;
     position: relative;
     flex-direction: column;
+    justify-content: center;
     width: 100%;
-    height: 210vh;
+    height: fit-content;
     background-color: #d3d4d8;
 }
 
 #account-container{
+    position: relative;
     display: flex;
+    flex-direction: column;
+    align-items: center;
 }
 
-#side-container{
-    flex-grow: .25;
+#side-container h1{
+    margin-top: 5em;
 }
 
 #main-container{
     position: relative;
-    top: 12em;
-    margin-right: 15em;
-    min-width: 55%;
+    margin: 5rem;
+    width: 55%;
     height: 72vh;
     border-radius: 1em;
     background-color: #fff;
@@ -32,7 +35,7 @@
     display: flex;
     flex-direction: column;
     justify-content: space-between;
-    height: 60em;
+    height: 60rem;
     margin-bottom: 5em;
 }
 
@@ -80,13 +83,7 @@
 
 #mydetails-container{
     display: flex;
-
-}
-#account-page h1{
-    text-align: justify;
-    margin-top: 145px;
-    margin-left: 40px;
-    font-size: xx-large;
+    flex-direction: column;
 }
 
 #account-page h2{
@@ -103,21 +100,82 @@
     height: auto;
 }
 
-@media (max-width:768px) {
+#coupon-modal{
+    position: fixed;
+    top: 40%;
+    left: 29%;
+    z-index: 1;
+    width: 40%;
+    background: linear-gradient(#738eab, #3a639b);
+}
+
+#coupon-body{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+#coupon-div{
+    width: max-content;
+}
+
+@media (min-width:600px) {
+    #side-container{
+        margin-top: 2em;
+    }
+
+    #side-heading{
+        font-size: xx-large;
+    }
+}
+
+@media (min-width:795px) and (max-width:1075px) {
     #account-container{
         flex-direction: column;
     }
 
     #account-page h1{
-        margin-top: 6em;
-        margin-bottom: 1em;
-        text-align: center;
-        margin-left: 0;
-        font-size: 1.6em;
+        font-size: xx-large;
+    }
+
+    #side-container{
+        margin-top: 2em;
     }
 
     #main-container{
         top:0;
         margin-right: 0;
+        margin-left: 0;
+        width: 90%;
+    }
+}
+
+@media (min-width:320px) and (max-width:794px) {
+    #side-container{
+        margin-top: 2em;
+    }
+
+    #account-page h1{
+        font-size: xx-large;
+    }
+
+    #main-container{
+        top:0;
+        margin: 2rem;
+        width: 90%;
+    }
+    #coupon-container{
+        margin-left: 1em;
+        margin-right: 1em;
+    }
+
+    #coupon-text-1{
+        background-size: 100% 90%;
+    }
+
+    #coupon-modal{
+        left: 11%;
+        width: 78%;
     }
 }
