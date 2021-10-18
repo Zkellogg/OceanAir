@@ -1,18 +1,56 @@
-import React from "react";
+import React, { useState } from "react";
 import Navbar from "../component/Navbar/Navbar";
 import "../CSS/Account.css"
 import "../images/santarosa/beach-1.jpeg"
 import Contact from "./Contact";
 
 function MyAccount() {
+    const [displayCoupon, setDisplayCoupon] = useState(false)
+
+    const handleCloseDisplay=()=>{
+        setDisplayCoupon(false)
+    }
+
+    const handleSeeCouponCode = () => {
+        if (displayCoupon) {
+            setDisplayCoupon(false)
+        } else {
+            setDisplayCoupon(true)
+        }
+    }
+
+    const handleCopyCode=(e)=>{
+        console.log(e.target.value)
+        const token=localStorage.getItem('jsonwebtoken')
+        if(token){
+            navigator.clipboard.writeText(e.target.value)
+        }
+    }
+
+    const couponModal = (
+        <div class="modal-content" id="coupon-modal">
+            <div class="modal-header" id="coupon-header">
+                <button onClick={handleCloseDisplay} type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body" id="coupon-body">
+                <h5>Coupon Code:</h5>
+                <div class="input-group" id="coupon-div">
+                    <p type="password" class="form-control" aria-label="Input group example" aria-describedby="btnGroupAddon" >OCEANAIR5</p>
+                    <button onClick={handleCopyCode} value="OCEANAIR5" class="input-group-text" id="btnGroupAddon">Copy!</button>
+                </div>
+            </div>
+        </div>
+    )
+
 
     return (
         <div className="container-fluid" id="account-page">
             <Navbar />
+            {displayCoupon ? couponModal : null}
             <div id="account-page">
                 <div id="account-container">
                     <div id="side-container">
-                        <h1>Welcome back, Jack!</h1>
+                        <h1 id="side-heading">Welcome back, Jack!</h1>
                     </div>
                     <div id="main-container">
                         <h2>My Coupons</h2>
@@ -22,9 +60,9 @@ function MyAccount() {
                                     Featured
                                 </div>
                                 <div class="card-body" id="coupon-text-1">
-                                    <h5 class="card-title">Special Santa Rosa Offer</h5>
+                                    <h5 class="card-title">Special Santa Rosa Beach Offer</h5>
                                     <p class="card-text">5% off your next booking</p>
-                                    <a href="#" class="btn btn-primary">Apply Coupon!</a>
+                                    <a onClick={handleSeeCouponCode} href="#" class="btn btn-primary">See Coupon!</a>
                                 </div>
                                 <div class="card-footer text-muted">
                                     2 days ago
@@ -35,9 +73,9 @@ function MyAccount() {
                                     Featured
                                 </div>
                                 <div class="card-body" id="coupon-text-2">
-                                    <h5 class="card-title">Special Pompano Offer</h5>
+                                    <h5 class="card-title">Special Pompano Beach Offer</h5>
                                     <p class="card-text">5% off your next booking</p>
-                                    <a href="#" class="btn btn-primary">Apply Coupon!</a>
+                                    <a onClick={handleSeeCouponCode} href="#" class="btn btn-primary">See Coupon!</a>
                                 </div>
                                 <div class="card-footer text-muted">
                                     2 days ago
@@ -50,7 +88,7 @@ function MyAccount() {
                                 <div class="card-body" id="coupon-text-3">
                                     <h5 class="card-title">Special Myrtle Beach Offer</h5>
                                     <p class="card-text">5% off your next booking</p>
-                                    <a href="#" class="btn btn-primary">Apply Coupon!</a>
+                                    <a onClick={handleSeeCouponCode} href="#" class="btn btn-primary">See Coupon!</a>
                                 </div>
                                 <div class="card-footer text-muted">
                                     2 days ago
@@ -60,7 +98,7 @@ function MyAccount() {
                     </div>
                 </div>
             </div>
-            <Contact/>
+            <Contact />
         </div>
     )
 }
