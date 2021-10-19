@@ -50,7 +50,7 @@ function MyAccount() {
             <div id="account-page">
                 <div id="account-container">
                     <div id="side-container">
-                        <h1 id="side-heading">Welcome back, Jack!</h1>
+                        <h1 id="side-heading">Welcome, Jack!</h1>
                     </div>
                     <div id="main-container">
                         <h2>My Coupons</h2>

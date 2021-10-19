@@ -6,7 +6,7 @@ function Footer() {
   return (
     <div>
       <footer class="footer page-footer font-small blue">
-        <img
+        <img id="checkin-footer"
           src={logo}
           width="350rem"
           height="150rem"

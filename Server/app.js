@@ -32,7 +32,7 @@ async function userRegister(user) {
   });
 }
 
-app.post("/add-review", authenticate,(req, res) => {
+app.post("/add-review", authenticate, (req, res) => {
   const { location } = req.body;
   const { name } = req.body;
   const { rating } = req.body;
@@ -87,7 +87,7 @@ app.post("/contact", (req, res) => {
     });
 });
 
-app.post("/register", (req, res) => {
+app.post("/register", async(req, res) => {
   const firstName = req.body.firstName;
   const lastName = req.body.lastName;
   const email = req.body.email;
@@ -109,13 +109,16 @@ app.post("/register", (req, res) => {
           };
           // async prisma querry
           userRegister(user);
+          const token = jwt.sign({ email: user.email }, "KEYBOARD CAT");
+               
           res.json({
-            success: "200",
-            message: "Successfully registered account!",
-          });
-        } else {
-          res.json({ success: false, message: "Failed to register account" });
-        }
+              success: "200",
+              message: "Successfully registered account!",
+              token:token
+            });
+          } else {
+            res.json({ success: false, message: "Failed to register account" });
+          }
       });
     } else {
       res.json({ success: false, message: "Failed to register account" });

@@ -10,6 +10,7 @@ import { Provider } from "react-redux";
 import reducer from './store/reducer'
 import Seagrove from "./component/Seagrove";
 import BaseLayoutProperty from "./component/PropertyBaseLayout";
+import CheckIn from "./component/CheckIn";
 
 const store = createStore(reducer,window.__REDUX_DEVTOOLS_EXTENSION__ && window.__REDUX_DEVTOOLS_EXTENSION__())
 const token=localStorage.getItem('jsonwebtoken')
@@ -24,6 +25,7 @@ ReactDOM.render(
       <Switch>
         <Route exact path="/" component={App}/>
         <Route path="/myaccount" component={MyAccount}/>
+        <Route path="/checkin" component={CheckIn}/>
         <BaseLayoutProperty>
           <Route path='/30A-Seagrove-Beach' component={Seagrove}/>
         </BaseLayoutProperty>
