@@ -1,4 +1,57 @@
 .image-gallery-content .image-gallery-slide .image-gallery-image {
   max-height: calc(100vh - 80px);
-  margin-top: 16vh;
+  margin-top: 3vh;
+}
+.title {
+  height: 40px;
+  display: flex;
+  flex-direction: row;
+}
+.title h1 {
+  margin-top: 0;
+}
+.title Button {
+  height: 40px;
+  margin: 0;
+  margin-left: 3vh;
+}
+
+.main {
+  display: flex;
+  max-width: 1500px;
+  flex-direction: row;
+}
+
+.description {
+  flex: 2;
+}
+
+.description h1 {
+  margin-top: 10px;
+}
+
+.description p {
+  line-height: 1.8;
+  font-size: 20px;
+  text-align: center;
+}
+
+.aminities {
+  flex: 1;
+}
+.aminities h2 {
+  margin-top: 10px;
+
+}
+
+@media only screen and (max-width: 800px) {
+  .main {
+    flex-direction: column;
+  }
+
+  .image-gallery-content .image-gallery-slide .image-gallery-image {
+    max-height: calc(100vh - 80px);
+    max-width: calc(100vh - 80px);
+    margin-top: 1vh;
+  }
 }
