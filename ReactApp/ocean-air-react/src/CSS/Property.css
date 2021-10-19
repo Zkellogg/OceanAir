@@ -26,6 +26,9 @@
   font-size: 15rem;
 }
 .Property1 {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
   margin-top: -7rem;
 }
 

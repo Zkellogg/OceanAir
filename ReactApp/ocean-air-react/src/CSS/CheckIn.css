@@ -35,6 +35,7 @@
 }
 
 #logo-img{
+    justify-content: space-between;
     z-index: 2;
 }
 
@@ -74,6 +75,13 @@
     margin-left: 1em;
     margin-right: 1em;
     list-style-type: none;
+}
+
+#back-btn{
+    margin: 2em;
+    border-radius: 1em;
+    border-color: #fff;
+    color: #fff;
 }
 
 /* Arrow section & animation */

@@ -5,3 +5,7 @@ body {
 .appDiv {
   background: linear-gradient(#fff, #aabfdb);
 }
+
+#map-iframe{
+  border-radius: 1em;
+}

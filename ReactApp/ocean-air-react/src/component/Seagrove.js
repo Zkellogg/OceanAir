@@ -53,6 +53,7 @@ import React from "react";
 import Button from "react-bootstrap/Button";
 import ImageSlider from "./ImageSlider";
 import "../CSS/Pompano.css";
+import Map from "./Map";
 
 function Seagrove() {
   return (
@@ -117,6 +118,7 @@ function Seagrove() {
                 <li>Two full bathrooms</li>
             </ul>
         </div>
+        <Map />
       </div>
     </div>
   );
