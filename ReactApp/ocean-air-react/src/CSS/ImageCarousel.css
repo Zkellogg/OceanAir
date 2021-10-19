@@ -1,0 +1,14 @@
+/* .sliderImage {
+  height: 25rem;
+  width: 100%;
+} */
+
+.item {
+  height: 28rem;
+  margin-top: 5rem;
+}
+
+.item img {
+  height: 100% !important;
+  object-fit: contain;
+}
