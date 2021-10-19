@@ -11,6 +11,7 @@ import reducer from "./store/reducer";
 import Seagrove from "./component/Seagrove";
 import BaseLayoutProperty from "./component/PropertyBaseLayout";
 import Pompano from "./component/Pompano";
+import CheckIn from "./component/CheckIn";
 
 const store = createStore(
   reducer,
@@ -28,6 +29,7 @@ ReactDOM.render(
         <Switch>
           <Route exact path="/" component={App} />
           <Route path="/myaccount" component={MyAccount} />
+          <Route path="/checkin" component={CheckIn} />
           <BaseLayoutProperty>
             <Route path="/30A-Seagrove-Beach" component={Seagrove} />
             <Route path="/pompano" component={Pompano} />

@@ -85,9 +85,17 @@ function SignIn(props){
             })
         }).then(response=>response.json())
         .then(results=>{
-            setMessage({
-                message:results.message
-            })
+            const token=localStorage.setItem('jsonwebtoken',results.token)
+            history.push('/myaccount')
+            if(token){
+                setMessage({
+                    message:results.message
+                })
+            }else{
+                setMessage({
+                    message:results.message
+                })
+            }
         })
     }
 
