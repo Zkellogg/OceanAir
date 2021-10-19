@@ -5,16 +5,16 @@ import logo from "../images/OceanAirLogoB_Locations_600x200.png"
 import "../CSS/CheckIn.css"
 import "../CSS/Footer.css"
 
-function CheckIn() {
+function Checkout() {
     return (
-        <div className="container-fluid" id="checkin-page">
+        <div>
             <div id="header-container">
                 <div className="container-fluid" id="header-img" width="150rem" height="500rem">
                     <Navbar id="logo-img">
                         <img src={logo} width="290rem" height="130rem" className="d-inline-block align-top" alt="" />
-                        <button type="button" class="btn btn-outline-secondary" id="back-btn">Back to Home</button>
+                        <button type="button" class="btn btn-outline-secondary" id="back-btn" value="">Back to Home</button>
                     </Navbar>
-                    <h1 className="checkin-header">Check-In Instructions</h1>
+                    <h1 className="checkin-header">Check-Out Instructions</h1>
                     <a className="arrow-div" href="#first-step">
                         <div class="arrow arrow-first"></div>
                         <div class="arrow arrow-second"></div>
@@ -63,10 +63,9 @@ function CheckIn() {
                     </li>
                 </ul>
             </div>
-            <Footer/>
+            <Footer />
         </div>
     )
 }
 
-export default CheckIn
-
+export default Checkout

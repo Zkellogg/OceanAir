@@ -2,6 +2,7 @@ import React from "react";
 import "../CSS/Property.css";
 import PictureGalleryComponent from "../component/PictureGalleryComponent";
 import Button from "react-bootstrap/Button";
+import Map from "./Map";
 
 function Seagrove() {
   return (
@@ -42,6 +43,9 @@ function Seagrove() {
           <li>item 4</li>
           <li>item 5</li>
         </ul>
+        <div id="">
+          <Map />
+        </div>
       </div>
     </div>
   );
