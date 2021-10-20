@@ -1,5 +1,4 @@
 import React from "react";
-import Button from "react-bootstrap/Button";
 import ImageSlider from "./ImageSlider";
 import "../CSS/Pompano.css";
 import Map from "./Map";
@@ -9,9 +8,6 @@ function Pompano() {
     <div>
       <div className="title">
         <h1>Chivas on 30A</h1>
-        <Button variant="primary" className="bookNowButton">
-          Book Now
-        </Button>
       </div>
       <div>
         <ImageSlider />
@@ -69,9 +65,14 @@ function Pompano() {
           </div>
         </div>
         <div class="container-sm" id="features-modal">
-          <div class="d-grid gap-2 col-6 mx-auto" id="modal-btn-div">
-            <a class="btn btn-primary" type="button" href="/check-in">Check-In</a>
-            <a class="btn btn-primary" type="button" href="/check-out">Check-Out</a>
+          <div class="container-sm" id="modal-btn-div-1">
+            <a class="btn btn-primary" id="modal-btn" type="button" href="/check-in">Check-In</a>
+            <a class="btn btn-primary" id="modal-btn" type="button" href="/check-out">Check-Out</a>
+          </div>
+          <div className="container-sm" id="modal-btn-div-2">
+          <a class="btn btn-primary" type="button" id="modal-btn" href="https://oceanair.guestybookings.com/listings?city=Pompano%20Beach">
+              Book Now
+            </a>
           </div>
         </div>
       </div>
