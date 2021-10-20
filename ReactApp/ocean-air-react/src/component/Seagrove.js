@@ -106,18 +106,24 @@ function Seagrove() {
                         damages. Any damages over $500 will be charged to the guest. Air
                         mattress available on request.
           </p>
+          <div className="aminities">
+            <Map />
+            <h2>This property offers</h2>
+            <ul>
+              <li>100% Private beach</li>
+              <li>Private two king bedroom unit</li>
+              <li>Full Kitchen with brand-new appliences</li>
+              <li>Free prking for up to two vehicles</li>
+              <li>Full washer and dryer</li>
+              <li>Two full bathrooms</li>
+            </ul>
+          </div>
         </div>
-        <div className="aminities">
-          <Map />
-          <h2>This property offers</h2>
-          <ul>
-            <li>100% Private beach</li>
-            <li>Private two king bedroom unit</li>
-            <li>Full Kitchen with brand-new appliences</li>
-            <li>Free prking for up to two vehicles</li>
-            <li>Full washer and dryer</li>
-            <li>Two full bathrooms</li>
-          </ul>
+        <div class="container-sm" id="features-modal">
+          <div class="d-grid gap-2 col-6 mx-auto" id="modal-btn-div">
+            <a class="btn btn-primary" type="button" href="/check-in">Check-In</a>
+            <a class="btn btn-primary" type="button" href="/check-out">Check-Out</a>
+          </div>
         </div>
       </div>
     </div>
