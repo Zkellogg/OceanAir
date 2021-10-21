@@ -6,6 +6,7 @@ import "../CSS/Navbar.css";
 import "../CSS/Review.css";
 import Property from "./Property";
 import { connect } from "react-redux";
+import FooterNav from "./FooterNav";
 
 function BaseLayoutProperty(props) {
   return (
@@ -20,6 +21,7 @@ function BaseLayoutProperty(props) {
         {/* <Property /> */}
       </div>
       {props.isAuth ? <Review /> : null}
+      <FooterNav/>
     </div>
   );
 }

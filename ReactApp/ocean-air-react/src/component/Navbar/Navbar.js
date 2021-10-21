@@ -58,8 +58,8 @@ function NavBarComp(props) {
               <Nav.Link href="/30A-Seagrove-Beach">
                 30A Seagrove Beach, FL
               </Nav.Link>
-              <Nav.Link href="/pompano">Pompano Beach, FL</Nav.Link>
-              <Nav.Link href="https://oceanair.guestybookings.com/listings/5fc519821b8cf2002f1dbf83">
+              <Nav.Link href="/Pompano-Beach">Pompano Beach, FL</Nav.Link>
+              <Nav.Link href="/Myrtle-Beach">
                 Myrtle Beach , SC
               </Nav.Link>
             </Nav>

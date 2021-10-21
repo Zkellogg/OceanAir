@@ -13,6 +13,7 @@ import BaseLayoutProperty from "./component/PropertyBaseLayout";
 import Pompano from "./component/Pompano";
 import CheckIn from "./component/CheckIn";
 import Checkout from "./component/Checkout";
+import Myrtle from "./component/Myrtle";
 
 const store = createStore(
   reducer,
@@ -34,7 +35,8 @@ ReactDOM.render(
           <Route path="/check-out" component={Checkout}/>
           <BaseLayoutProperty>
             <Route path="/30A-Seagrove-Beach" component={Seagrove} />
-            <Route path="/pompano" component={Pompano} />
+            <Route path="/Pompano-Beach" component={Pompano} />
+            <Route path="/Myrtle-Beach" component={Myrtle}/>
           </BaseLayoutProperty>
         </Switch>
       </BrowserRouter>

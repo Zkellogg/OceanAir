@@ -70,7 +70,6 @@ function Seagrove() {
             charged to the guest. Air mattress available on request.
           </p>
           <div className="aminities">
-            <Map />
             <h2>This property offers</h2>
             <ul>
               <li>100% Private beach</li>
@@ -80,9 +79,13 @@ function Seagrove() {
               <li>Full washer and dryer</li>
               <li>Two full bathrooms</li>
             </ul>
+            <Map />
           </div>
         </div>
         <div class="container-sm" id="features-modal">
+          <div class="modal-header" id="modal-header-div">
+            <h4 class="modal-title" id="modal-heading">Seagrove Beach</h4>
+          </div>
           <div class="container-sm" id="modal-btn-div-1">
             <a
               class="btn btn-primary"
@@ -101,6 +104,7 @@ function Seagrove() {
               Check-Out
             </a>
           </div>
+<<<<<<< HEAD
           <div className="container-sm" id="modal-btn-div-2">
             <a
               class="btn btn-primary"
@@ -108,6 +112,10 @@ function Seagrove() {
               id="modal-btn"
               href="https://oceanair.guestybookings.com/listings?city=Santa%20Rosa%20Beach"
             >
+=======
+          <div class="modal-footer" id="modal-footer-div">
+            <a class="btn btn-primary" type="button" id="modal-btn" href="https://oceanair.guestybookings.com/listings?city=Santa%20Rosa%20Beach">
+>>>>>>> 776a54d4fdea55dbe243ee1f9107dab0c7bdfd7f
               Book Now
             </a>
           </div>
