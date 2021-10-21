@@ -26,6 +26,9 @@
   font-size: 15rem;
 }
 .Property1 {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
   margin-top: -7rem;
 }
 
@@ -207,4 +210,10 @@ p {
     align-items: center;
     justify-content: space-between;
   }
+}
+@media only screen and (min-width: 200px)and (max-device-width: 420px) and (-webkit-min-device-pixel-ratio: 1){
+.image-gallery-thumbnails-wrapper.thumbnails-swipe-horizontal {
+  touch-action: pan-y;
+  max-width: 33rem;
+}
 }
