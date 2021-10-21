@@ -14,6 +14,7 @@ import Pompano from "./component/Pompano";
 import CheckIn from "./component/CheckIn";
 import Checkout from "./component/Checkout";
 import Myrtle from "./component/Myrtle";
+import Activities from "./component/Activities";
 
 const store = createStore(
   reducer,
@@ -33,6 +34,7 @@ ReactDOM.render(
           <Route path="/myaccount" component={MyAccount} />
           <Route path="/check-in" component={CheckIn} />
           <Route path="/check-out" component={Checkout}/>
+          <Route path="/activities" component={Activities}/>
           <BaseLayoutProperty>
             <Route path="/30A-Seagrove-Beach" component={Seagrove} />
             <Route path="/Pompano-Beach" component={Pompano} />

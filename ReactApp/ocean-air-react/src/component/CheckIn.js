@@ -20,7 +20,7 @@ function CheckIn() {
                         <button onClick={handleRoutePrevious} type="button" class="btn btn-outline-secondary" id="back-btn">Back to Previous</button>
                     </Navbar>
                     <h1 className="checkin-header">Check-In Instructions</h1>
-                    <a className="arrow-div" href="#first-step">
+                    <a className="arrow-div">
                     <a onClick={handleRoutePrevious} type="button" class="btn btn-outline-secondary" id="back-btn-mobile">Back</a>
                         <div class="arrow arrow-first"></div>
                         <div class="arrow arrow-second"></div>
