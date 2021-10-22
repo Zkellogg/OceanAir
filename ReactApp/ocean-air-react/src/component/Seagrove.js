@@ -127,6 +127,8 @@ function Seagrove() {
           <div class="container-sm" id="modal-btn-div-1">
             <a class="btn btn-primary" id="modal-btn" type="button" href="/check-in">Check-In Instructions</a>
             <a class="btn btn-primary" id="modal-btn" type="button" href="/check-out">Check-Out Instructions</a>
+            <a class="btn btn-primary" id="modal-btn" type="button" href="/nearby-restaurants/Seagrove-Beach">Nearby Restaurants</a>
+            <a class="btn btn-primary" id="modal-btn" type="button" href="/things-to-do/30A-Seagrove-Beach">Things To Do</a>
           </div>
         </div>
       </div>

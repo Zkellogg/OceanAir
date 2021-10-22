@@ -14,7 +14,12 @@ import Pompano from "./component/Pompano";
 import CheckIn from "./component/CheckIn";
 import Checkout from "./component/Checkout";
 import Myrtle from "./component/Myrtle";
-import Activities from "./component/Activities";
+import RestaurantsSR from "./component/RestaurantsSR";
+import RestaurantsPO from "./component/RestaurantsPO";
+import RestaurantsMYR from "./component/RestaurantsMYR";
+import ActivitySR from "./component/ActivitySR";
+import ActivityPO from "./component/ActivityPO";
+import ActivityMYR from "./component/ActivityMYR";
 
 const store = createStore(
   reducer,
@@ -34,7 +39,12 @@ ReactDOM.render(
           <Route path="/myaccount" component={MyAccount} />
           <Route path="/check-in" component={CheckIn} />
           <Route path="/check-out" component={Checkout}/>
-          <Route path="/activities" component={Activities}/>
+          <Route path="/nearby-restaurants/Seagrove-Beach" component={RestaurantsSR}/>
+          <Route path="/nearby-restaurants/Pompano-Beach" component={RestaurantsPO}/>
+          <Route path="/nearby-restaurants/Myrtle-Beach" component={RestaurantsMYR}/>
+          <Route path='/things-to-do/30A-Seagrove-Beach' component={ActivitySR}/>
+          <Route path='/things-to-do/Pompano-Beach' component={ActivityPO}/>
+          <Route path='/things-to-do/Myrtle-Beach' component={ActivityMYR}/>
           <BaseLayoutProperty>
             <Route path="/30A-Seagrove-Beach" component={Seagrove} />
             <Route path="/Pompano-Beach" component={Pompano} />
