@@ -115,3 +115,23 @@
     display: none;
   }
 }
+  *, ::after, ::before {
+    box-sizing: border-box;
+    max-width: -webkit-fill-available;
+  }
+
+@media only screen and (min-width:1300px){
+  #map-iframe {
+    margin: 1em;
+    border-radius: 1em;
+    width: 72rem;
+}
+.image-gallery {
+  -webkit-user-select: none;
+  -o-user-select: none;
+  user-select: none;
+  -webkit-tap-highlight-color: rgba(0,0,0,0);
+  position: relative;
+  width: min-content;
+}
+}
