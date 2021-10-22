@@ -84,7 +84,9 @@ function Seagrove() {
         </div>
         <div class="container-sm" id="features-modal">
           <div class="modal-header" id="modal-header-div">
-            <h4 class="modal-title" id="modal-heading">Seagrove Beach</h4>
+            <h4 class="modal-title" id="modal-heading">
+              Seagrove Beach
+            </h4>
           </div>
           <div class="container-sm" id="modal-btn-div-1">
             <a
@@ -104,18 +106,13 @@ function Seagrove() {
               Check-Out
             </a>
           </div>
-<<<<<<< HEAD
-          <div className="container-sm" id="modal-btn-div-2">
+          <div class="modal-footer" id="modal-footer-div">
             <a
               class="btn btn-primary"
               type="button"
               id="modal-btn"
               href="https://oceanair.guestybookings.com/listings?city=Santa%20Rosa%20Beach"
             >
-=======
-          <div class="modal-footer" id="modal-footer-div">
-            <a class="btn btn-primary" type="button" id="modal-btn" href="https://oceanair.guestybookings.com/listings?city=Santa%20Rosa%20Beach">
->>>>>>> 776a54d4fdea55dbe243ee1f9107dab0c7bdfd7f
               Book Now
             </a>
           </div>

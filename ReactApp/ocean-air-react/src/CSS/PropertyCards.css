@@ -25,6 +25,7 @@
   margin: 3rem 4rem 3rem 3rem;
   background-color: #ffffffcc;
   text-align: center;
+  border-radius: 6px;
 }
 
 .card-container:hover {
