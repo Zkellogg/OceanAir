@@ -82,7 +82,7 @@ function ActivityMYR() {
                     <li id="activities-li">
                         <div>
                             <h1 className="checkin-headers" id="activity-header">Activity #4</h1>
-                            <img src="https://dynamic-media-cdn.tripadvisor.com/media/photo-o/0d/a2/4b/11/fun-place.jpg?w=1200&h=-1&s=1" alt="Restaurant Image" />
+                            <img height="auto" width="500rem" src="https://dynamic-media-cdn.tripadvisor.com/media/photo-o/0d/a2/4b/11/fun-place.jpg?w=1200&h=-1&s=1" alt="Restaurant Image" />
                             <span>Address</span>
                             <span>Phone #</span>
                         </div>
