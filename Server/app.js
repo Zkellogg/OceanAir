@@ -106,18 +106,6 @@ app.post("/register", async (req, res) => {
           // async prisma querry
           userRegister(user);
           const token = jwt.sign({ email: user.email }, "KEYBOARD CAT");
-<<<<<<< HEAD
-
-          res.json({
-            success: "200",
-            message: "Successfully registered account!",
-            token: token,
-          });
-        } else {
-          res.json({ success: false, message: "Failed to register account" });
-        }
-=======
-               console.log(user.firstName)
           res.json({
               success: "200",
               message: "Successfully registered account!",
@@ -127,7 +115,6 @@ app.post("/register", async (req, res) => {
           } else {
             res.json({ success: false, message: "Failed to register account" });
           }
->>>>>>> Working
       });
     } else {
       res.json({ success: false, message: "Failed to register account" });
