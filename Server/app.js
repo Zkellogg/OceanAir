@@ -170,6 +170,6 @@ app.post("/login", async (req, res) => {
 //     );
 //   });
 
-app.listen(8080, () => {
-  console.log("Server is running...");
+app.listen(process.env.PORT || 3000, () => {
+  console.log("server running");
 });
