@@ -39,6 +39,21 @@
     margin-bottom: 5em;
 }
 
+#main-container::-webkit-scrollbar{
+    width: 20px;
+}
+
+#main-container::-webkit-scrollbar-track{
+    background-color: transparent;
+}
+
+#main-container::-webkit-scrollbar-thumb{
+    background-color: #d6dee1;
+    border-radius: 20px;
+    border: 6px solid transparent;
+    background-clip: content-box;
+}
+
 #coupon-container{
     margin-left: 3em;
     margin-right:3em;
