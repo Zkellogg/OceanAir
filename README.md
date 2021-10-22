@@ -21,7 +21,7 @@ __________________________________________________
  
   * React
   * Redux
-  * JavaScript 
+  * JavaScript![icons8-javascript](https://user-images.githubusercontent.com/80641831/138388533-4dc89ad8-e164-428f-97aa-015cfe061aea.gif)
   * css
   * Node
   * Prisma
