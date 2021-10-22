@@ -88,7 +88,16 @@ function Seagrove() {
               Seagrove Beach
             </h4>
           </div>
-<<<<<<< HEAD
+          <div class="modal-body" id="modal-footer-div">
+            <a
+              class="btn btn-primary"
+              type="button"
+              id="modal-btn"
+              href="https://oceanair.guestybookings.com/listings?city=Santa%20Rosa%20Beach"
+            >
+              Book Now!
+            </a>
+          </div>
           <div class="container-sm" id="modal-btn-div-1">
             <a
               class="btn btn-primary"
@@ -96,7 +105,7 @@ function Seagrove() {
               type="button"
               href="/check-in"
             >
-              Check-In
+              Check-In Instructions
             </a>
             <a
               class="btn btn-primary"
@@ -104,29 +113,24 @@ function Seagrove() {
               type="button"
               href="/check-out"
             >
-              Check-Out
+              Check-Out Instructions
             </a>
-          </div>
-          <div class="modal-footer" id="modal-footer-div">
             <a
               class="btn btn-primary"
-              type="button"
               id="modal-btn"
-              href="https://oceanair.guestybookings.com/listings?city=Santa%20Rosa%20Beach"
+              type="button"
+              href="/nearby-restaurants/Seagrove-Beach"
             >
-              Book Now
-=======
-          <div class="modal-body" id="modal-footer-div">
-            <a class="btn btn-primary" type="button" id="modal-btn" href="https://oceanair.guestybookings.com/listings?city=Santa%20Rosa%20Beach">
-              Book Now!
->>>>>>> b35acd84768982f738f2452cb1c2acbdfdcb5204
+              Nearby Restaurants
             </a>
-          </div>
-          <div class="container-sm" id="modal-btn-div-1">
-            <a class="btn btn-primary" id="modal-btn" type="button" href="/check-in">Check-In Instructions</a>
-            <a class="btn btn-primary" id="modal-btn" type="button" href="/check-out">Check-Out Instructions</a>
-            <a class="btn btn-primary" id="modal-btn" type="button" href="/nearby-restaurants/Seagrove-Beach">Nearby Restaurants</a>
-            <a class="btn btn-primary" id="modal-btn" type="button" href="/things-to-do/30A-Seagrove-Beach">Things To Do</a>
+            <a
+              class="btn btn-primary"
+              id="modal-btn"
+              type="button"
+              href="/things-to-do/30A-Seagrove-Beach"
+            >
+              Things To Do
+            </a>
           </div>
         </div>
       </div>
