@@ -40,7 +40,6 @@ app.post("/add-review", authenticate, (req, res) => {
   const { message } = req.body;
   const { checkoutDate } = req.body;
 
-
   const mail = {
     to: "zac@visitoceanair.com", // Change to your recipient
     from: "info@visitoceanair.com", // Change to your verified sender
@@ -87,7 +86,7 @@ app.post("/contact", (req, res) => {
     });
 });
 
-app.post("/register", async(req, res) => {
+app.post("/register", async (req, res) => {
   const firstName = req.body.firstName;
   const lastName = req.body.lastName;
   const email = req.body.email;
@@ -110,15 +109,15 @@ app.post("/register", async(req, res) => {
           // async prisma querry
           userRegister(user);
           const token = jwt.sign({ email: user.email }, "KEYBOARD CAT");
-               
+
           res.json({
-              success: "200",
-              message: "Successfully registered account!",
-              token:token
-            });
-          } else {
-            res.json({ success: false, message: "Failed to register account" });
-          }
+            success: "200",
+            message: "Successfully registered account!",
+            token: token,
+          });
+        } else {
+          res.json({ success: false, message: "Failed to register account" });
+        }
       });
     } else {
       res.json({ success: false, message: "Failed to register account" });
@@ -144,6 +143,7 @@ app.post("/login", async (req, res) => {
         success: true,
         message: "Successfully logged in!",
         token: token,
+        firstName: foundUser.firstName,
       });
     } else {
       res.json({ success: false, message: "Failed to login in!" });
