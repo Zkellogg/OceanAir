@@ -1,10 +1,11 @@
 import React, { useState } from "react";
+import { connect } from "react-redux";
 import Navbar from "../component/Navbar/Navbar";
 import "../CSS/Account.css"
 import "../images/santarosa/beach-1.jpeg"
 import Contact from "./Contact";
 
-function MyAccount() {
+function MyAccount(props) {
     const [displayCoupon, setDisplayCoupon] = useState(false)
 
     const handleCloseDisplay=()=>{
@@ -50,48 +51,30 @@ function MyAccount() {
             <div id="account-page">
                 <div id="account-container">
                     <div id="side-container">
-                        <h1 id="side-heading">Welcome, Jack!</h1>
+                        <h1 id="side-heading">Welcome, {props.firstName}</h1>
                     </div>
                     <div id="main-container">
                         <h2>My Coupons</h2>
                         <div id="coupon-section">
                             <div class="card text-center" id="coupon-container">
-                                <div class="card-header">
-                                    Featured
-                                </div>
                                 <div class="card-body" id="coupon-text-1">
                                     <h5 class="card-title">Special Santa Rosa Beach Offer</h5>
                                     <p class="card-text">5% off your next booking</p>
-                                    <a onClick={handleSeeCouponCode} href="#" class="btn btn-primary">See Coupon!</a>
-                                </div>
-                                <div class="card-footer text-muted">
-                                    2 days ago
+                                    <a onClick={handleSeeCouponCode} href="#" class="btn btn-primary" >See Coupon!</a>
                                 </div>
                             </div>
                             <div class="card text-center" id="coupon-container">
-                                <div class="card-header">
-                                    Featured
-                                </div>
                                 <div class="card-body" id="coupon-text-2">
                                     <h5 class="card-title">Special Pompano Beach Offer</h5>
                                     <p class="card-text">5% off your next booking</p>
                                     <a onClick={handleSeeCouponCode} href="#" class="btn btn-primary">See Coupon!</a>
                                 </div>
-                                <div class="card-footer text-muted">
-                                    2 days ago
-                                </div>
                             </div>
                             <div class="card text-center" id="coupon-container">
-                                <div class="card-header">
-                                    Featured
-                                </div>
                                 <div class="card-body" id="coupon-text-3">
                                     <h5 class="card-title">Special Myrtle Beach Offer</h5>
                                     <p class="card-text">5% off your next booking</p>
                                     <a onClick={handleSeeCouponCode} href="#" class="btn btn-primary">See Coupon!</a>
-                                </div>
-                                <div class="card-footer text-muted">
-                                    2 days ago
                                 </div>
                             </div>
                         </div>
@@ -103,4 +86,10 @@ function MyAccount() {
     )
 }
 
-export default MyAccount
+const mapStateToProps = (state) => {
+    return {
+        firstName: state.firstName
+    }
+}
+
+export default connect(mapStateToProps)(MyAccount)

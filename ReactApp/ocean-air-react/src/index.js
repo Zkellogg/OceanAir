@@ -26,8 +26,9 @@ const store = createStore(
   window.__REDUX_DEVTOOLS_EXTENSION__ && window.__REDUX_DEVTOOLS_EXTENSION__()
 );
 const token = localStorage.getItem("jsonwebtoken");
+const firstName=localStorage.getItem('Bearer')
 if (token) {
-  store.dispatch({ type: "ON_LOGIN" });
+  store.dispatch({ type: "ON_LOGIN",payload:firstName});
 }
 
 ReactDOM.render(

@@ -17,9 +17,6 @@ app.use(cors());
 app.use(express.json());
 app.use(express.urlencoded());
 
-// global.users = [];
-// global.emails = [];
-
 async function userRegister(user) {
   await prisma.user.create({
     data: {
@@ -110,11 +107,12 @@ app.post("/register", async(req, res) => {
           // async prisma querry
           userRegister(user);
           const token = jwt.sign({ email: user.email }, "KEYBOARD CAT");
-               
+               console.log(user.firstName)
           res.json({
               success: "200",
               message: "Successfully registered account!",
-              token:token
+              token:token,
+              firstName:user.firstName
             });
           } else {
             res.json({ success: false, message: "Failed to register account" });
@@ -140,10 +138,12 @@ app.post("/login", async (req, res) => {
       console.log(results);
       const token = jwt.sign({ email: foundUser.email }, "KEYBOARD CAT");
       console.log(token);
+      console.log(foundUser.firstName)
       res.json({
         success: true,
         message: "Successfully logged in!",
         token: token,
+        firstName:foundUser.firstName
       });
     } else {
       res.json({ success: false, message: "Failed to login in!" });
