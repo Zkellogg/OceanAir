@@ -68,14 +68,16 @@ function Pompano() {
           <div class="modal-header" id="modal-header-div">
             <h4 class="modal-title" id="modal-heading">Pompano Beach</h4>
           </div>
-          <div class="container-sm" id="modal-btn-div-1">
-            <a class="btn btn-primary" id="modal-btn" type="button" href="/check-in">Check-In</a>
-            <a class="btn btn-primary" id="modal-btn" type="button" href="/check-out">Check-Out</a>
-          </div>
-          <div class="modal-footer" id="modal-footer-div">
-            <a class="btn btn-primary" type="button" id="modal-btn" href="https://oceanair.guestybookings.com/listings?city=Pompano%20Beach">
-              Book Now
+          <div class="modal-body" id="modal-footer-div">
+            <a class="btn btn-primary" type="button" id="modal-btn" href="https://oceanair.guestybookings.com/listings?city=Santa%20Rosa%20Beach">
+              Book Now!
             </a>
+          </div>
+          <div class="container-sm" id="modal-btn-div-1">
+            <a class="btn btn-primary" id="modal-btn" type="button" href="/check-in">Check-In Instructions</a>
+            <a class="btn btn-primary" id="modal-btn" type="button" href="/check-out">Check-Out Instructions</a>
+            <a class="btn btn-primary" id="modal-btn" type="button" href="/nearby-restaurants/Pompano-Beach">Nearby Restaurants</a>
+            <a class="btn btn-primary" id="modal-btn" type="button" href="/things-to-do/Pompano-Beach">Things To Do</a>
           </div>
         </div>
       </div>

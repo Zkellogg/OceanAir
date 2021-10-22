@@ -21,7 +21,7 @@ function Checkout() {
                         <a onClick={handleRoutePrevious} type="button" class="btn btn-outline-secondary" id="back-btn">Back to Previous</a>
                     </Navbar>
                     <h1 className="checkin-header">Check-Out Instructions</h1>
-                    <a className="arrow-div" href="#first-step">
+                    <a className="arrow-div" >
                         <a onClick={handleRoutePrevious} type="button" class="btn btn-outline-secondary" id="back-btn-mobile">Back</a>
                         <div class="arrow arrow-first"></div>
                         <div class="arrow arrow-second"></div>
