@@ -79,7 +79,7 @@ function SignIn(props) {
             .then(results => {
                 localStorage.setItem('jsonwebtoken', results.token)
                 localStorage.setItem('Bearer',results.firstName)
-                history.push('/myaccount')
+                props.history.push('/myaccount')
             })
     }
 

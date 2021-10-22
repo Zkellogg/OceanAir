@@ -1,6 +1,6 @@
-import React, { useState } from "react";
+import React,{useState} from "react";
 import { connect } from "react-redux";
-import Navbar from "../component/Navbar/Navbar";
+import Navbar from "./Navbar/Navbar";
 import "../CSS/Account.css"
 import "../images/santarosa/beach-1.jpeg"
 import Contact from "./Contact";

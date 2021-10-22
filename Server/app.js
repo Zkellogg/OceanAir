@@ -90,8 +90,6 @@ app.post("/register", async (req, res) => {
   const password = req.body.password;
   const phone = req.body.phone;
 
-  console.log(firstName);
-
   bcrypt.genSalt(10, function (error, salt) {
     if (!error) {
       bcrypt.hash(password, salt, function (error, hash) {
@@ -135,8 +133,6 @@ app.post("/login", async (req, res) => {
     if (results) {
       console.log(results);
       const token = jwt.sign({ email: foundUser.email }, "KEYBOARD CAT");
-      console.log(token);
-      console.log(foundUser.firstName)
       res.json({
         success: true,
         message: "Successfully logged in!",
@@ -149,25 +145,6 @@ app.post("/login", async (req, res) => {
   });
 });
 
-//   const persistedUser = users.find((user) => {
-//     const passphrase = bcrypt.compare(
-//       password,
-//       user.password,
-//       function (error, results) {
-//         if (results && user.email == useremail) {
-//           const userLogin = {
-//             useremail: users.email,
-//           };
-//           const token = jwt.sign({ user: userLogin }, "KEYBOARD CAT");
-//           console.log(token);
-//           res.json({ success: true, token: token });
-//         } else {
-//           res.json({ success: false, message: "Failed to login in!" });
-//         }
-//       }
-//     );
-//   });
-
-app.listen(process.env.PORT || 3000, () => {
+app.listen(process.env.PORT || 8080, () => {
   console.log("server running");
 });

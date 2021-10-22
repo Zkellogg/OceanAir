@@ -3,7 +3,6 @@ import ReactDOM from "react-dom";
 import { BrowserRouter, Switch, Route } from "react-router-dom";
 import "./index.css";
 import App from "./App";
-import MyAccount from "./component/MyAccount";
 import reportWebVitals from "./reportWebVitals";
 import { createStore } from "redux";
 import { Provider } from "react-redux";
@@ -20,6 +19,7 @@ import RestaurantsMYR from "./component/RestaurantsMYR";
 import ActivitySR from "./component/ActivitySR";
 import ActivityPO from "./component/ActivityPO";
 import ActivityMYR from "./component/ActivityMYR";
+import MyAccount from "./component/MyAccount";
 
 const store = createStore(
   reducer,
