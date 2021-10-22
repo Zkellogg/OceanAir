@@ -136,3 +136,7 @@ position: relative;
 width: min-content;
 }
 }
+.title h1 {
+  margin: auto;
+  font-size: inherit;
+}
