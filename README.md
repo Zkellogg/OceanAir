@@ -8,6 +8,7 @@ __________________________________________________
 **Ocean Air Vacation Rental App**
 
 **Website URL:**
+https://quiet-castle-41187.herokuapp.com
 
 
 
@@ -35,6 +36,7 @@ __________________________________________________
  
 **Data-base**
   * Prisma
+  
 **Deployed with:**  
   * Heroku
 __________________________________________________
