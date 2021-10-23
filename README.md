@@ -27,17 +27,16 @@ __________________________________________________
  ![css](https://user-images.githubusercontent.com/80641831/138389481-3f4924ee-1df0-49b4-9d35-d7e8c22a8645.png)
 
  ![nodejs](https://user-images.githubusercontent.com/80641831/138389400-65a8d6a3-497c-4b27-8868-fdd7ad24e792.png)
-  * JavaScript
+  
   * React
   * Redux
-  * Prisma
-  * Node  
-  * css
+  
+ 
+ 
 **Data-base**
-  
-  
+  * Prisma
 **Deployed with:**  
-  
+  * Heroku
 __________________________________________________
 ## Live screen shots: ##
 
