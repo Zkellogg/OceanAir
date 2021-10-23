@@ -13,16 +13,21 @@ function Contact() {
       message: message.value,
     };
 
-    let response = await fetch("http://localhost:8080/contact", {
-      method: "POST",
-      headers: {
-        "Content-Type": "application/json",
-      },
-      body: JSON.stringify(details),
-    });
+    let response = await fetch(
+      "https://quiet-castle-41187.herokuapp.com/contact",
+      {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+        },
+        body: JSON.stringify(details),
+      }
+    );
     setStatus("Submit");
     let result = await response.json();
-    alert("Thank you for contacting us! We will be back with you as soon as possible! ");
+    alert(
+      "Thank you for contacting us! We will be back with you as soon as possible! "
+    );
   };
 
   return (
