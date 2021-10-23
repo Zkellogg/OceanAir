@@ -44,7 +44,7 @@ function SignIn(props) {
     }
 
     const handleOnLogin = () => {
-        fetch('http://localhost:8080/login', {
+        fetch('https://quiet-castle-41187.herokuapp.com/login', {
             method: 'POST',
             headers: {
                 'Content-Type': 'application/json'
@@ -63,7 +63,7 @@ function SignIn(props) {
     }
 
     const handleOnRegister = () => {
-        fetch('http://localhost:8080/register', {
+        fetch('https://quiet-castle-41187.herokuapp.com/register', {
             method: 'POST',
             headers: {
                 'Content-Type': 'application/json'
@@ -79,7 +79,7 @@ function SignIn(props) {
             .then(results => {
                 localStorage.setItem('jsonwebtoken', results.token)
                 localStorage.setItem('Bearer',results.firstName)
-                props.history.push('/myaccount')
+                history.push('/myaccount')
             })
     }
 

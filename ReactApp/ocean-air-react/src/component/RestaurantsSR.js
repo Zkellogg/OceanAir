@@ -73,8 +73,8 @@ function RestaurantsSR() {
                 src={oldFloridia}
                 alt="Restaurant Image"
               />
-              <span>33 Heron's Watch Way, Santa Rosa Beach, FL 32459</span>
-              <span>(850) 534-3045</span>
+              <h5>33 Heron's Watch Way, Santa Rosa Beach, FL 32459</h5>
+              <h5>(850) 534-3045</h5>
             </div>
             <div>
               <span>
@@ -102,8 +102,8 @@ function RestaurantsSR() {
                 src={steamboat}
                 alt="Restaurant Image"
               />
-              <span>4935 E County Hwy 30A, Santa Rosa Beach, FL 32459</span>
-              <span>(850) 213-3167</span>
+              <h5>4935 E County Hwy 30A, Santa Rosa Beach, FL 32459</h5>
+              <h5>(850) 213-3167</h5>
             </div>
             <div>
               <span>
@@ -124,8 +124,8 @@ function RestaurantsSR() {
                 src={perfectPig}
                 alt="Restaurant Image"
               />
-              <span>4281 E County Highway, Santa Rosa Beach, FL 32459</span>
-              <span>(850) 213-0701</span>
+              <h5>4281 E County Highway, Santa Rosa Beach, FL 32459</h5>
+              <h5>(850) 213-0701</h5>
             </div>
             <div>
               <span>
@@ -147,8 +147,8 @@ function RestaurantsSR() {
                 src={brunos}
                 alt="Restaurant Image"
               />
-              <span>6652 E County Hwy 30A, Watersound, FL 32461</span>
-              <span>(850) 231-1699</span>
+              <h5>6652 E County Hwy 30A, Watersound, FL 32461</h5>
+              <h5>(850) 231-1699</h5>
             </div>
             <div>
               <span>

@@ -55,7 +55,7 @@
 .checkin-headers{
     background: linear-gradient(#738eab, #3a639b);
     color: #fff;
-    width: 6em;
+    width: fit-content;
     font-size: 2.5rem;
     font-family: monospace;
 }

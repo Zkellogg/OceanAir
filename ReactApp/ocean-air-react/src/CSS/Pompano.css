@@ -110,7 +110,7 @@
   }
 }
 
-@media (max-width:1199px) {
+@media (max-width:1530px) {
   #features-modal{
     display: none;
   }
@@ -135,8 +135,9 @@ user-select: none;
 position: relative;
 width: min-content;
 }
-}
+
 .title h1 {
   margin: auto;
   font-size: inherit;
+}
 }

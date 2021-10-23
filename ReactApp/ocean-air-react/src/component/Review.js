@@ -16,7 +16,7 @@ function Review(){
         setStatus("Sending...");
 
         console.log(details)
-        let response = await fetch("http://localhost:8080/add-review", {
+        let response = await fetch("https://quiet-castle-41187.herokuapp.com/add-review", {
           method: "POST",
           headers: {
             Authorization:`jsonwebtoken ${localStorage.getItem('jsonwebtoken')}`

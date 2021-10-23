@@ -1,6 +1,7 @@
 import React,{useState} from "react";
 import { connect } from "react-redux";
 import Navbar from "./Navbar/Navbar";
+import Footer from "./Footer"
 import "../CSS/Account.css"
 import "../images/santarosa/beach-1.jpeg"
 import Contact from "./Contact";
@@ -80,8 +81,9 @@ function MyAccount(props) {
                         </div>
                     </div>
                 </div>
+                <Contact />
+                <Footer/>
             </div>
-            <Contact />
         </div>
     )
 }
