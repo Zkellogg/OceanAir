@@ -5,7 +5,8 @@
     justify-content: center;
     width: 100%;
     height: fit-content;
-    background-color: #d3d4d8;
+    background: linear-gradient(#fff, #aabfdb);
+    padding: 0;
 }
 
 #account-container{

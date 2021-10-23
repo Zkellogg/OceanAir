@@ -35,8 +35,8 @@ function RestaurantsMYR() {
                         <div>
                             <h1 className="checkin-headers" id="activity-header">Restaurant #1</h1>
                             <img height="auto" width="500rem" src="https://dynamic-media-cdn.tripadvisor.com/media/photo-o/0d/a2/4b/11/fun-place.jpg?w=1200&h=-1&s=1" alt="Restaurant Image" />
-                            <span>Address</span>
-                            <span>Phone #</span>
+                            <h5>Address</h5>
+                            <h5>Phone #</h5>
                         </div>
                         <div>
                             <span>pellentesque habitant morbi tristique senectus et netus et malesuada
@@ -51,8 +51,8 @@ function RestaurantsMYR() {
                         <div>
                             <h1 className="checkin-headers" id="activity-header">Restaurant #2</h1>
                             <img height="auto" width="500rem" src="https://dynamic-media-cdn.tripadvisor.com/media/photo-o/0d/a2/4b/11/fun-place.jpg?w=1200&h=-1&s=1" alt="Restaurant Image" />
-                            <span>Address</span>
-                            <span>Phone #</span>
+                            <h5>Address</h5>
+                            <h5>Phone #</h5>
                         </div>
                         <div>
                             <span>pellentesque habitant morbi tristique senectus et netus et malesuada
@@ -67,8 +67,8 @@ function RestaurantsMYR() {
                         <div>
                             <h1 className="checkin-headers" id="activity-header">Restaurant #3</h1>
                             <img height="auto" width="500rem" src="https://dynamic-media-cdn.tripadvisor.com/media/photo-o/0d/a2/4b/11/fun-place.jpg?w=1200&h=-1&s=1" alt="Restaurant Image" />
-                            <span>Address</span>
-                            <span>Phone #</span>
+                            <h5>Address</h5>
+                            <h5>Phone #</h5>
                         </div>
                         <div>
                             <span>pellentesque habitant morbi tristique senectus et netus et malesuada
@@ -83,8 +83,8 @@ function RestaurantsMYR() {
                         <div>
                             <h1 className="checkin-headers" id="activity-header">Restaurant #4</h1>
                             <img height="auto" width="500rem" src="https://dynamic-media-cdn.tripadvisor.com/media/photo-o/0d/a2/4b/11/fun-place.jpg?w=1200&h=-1&s=1" alt="Restaurant Image" />
-                            <span>Address</span>
-                            <span>Phone #</span>
+                            <h5>Address</h5>
+                            <h5>Phone #</h5>
                         </div>
                         <div>
                             <span>pellentesque habitant morbi tristique senectus et netus et malesuada
