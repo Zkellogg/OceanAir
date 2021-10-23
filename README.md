@@ -15,7 +15,7 @@ https://quiet-castle-41187.herokuapp.com
 
 __________________________________________________
 
-## Website description: Our group created a vacation rental application, to help showcase available rental properties beach side. Using react-redux, JavaScritp, HTML and CSS for our client-side, we were able to beautifly represent the rental properties that may intrest you. As for the back-end and server, we used express,JavaScript, Node.JS along with prisma database. Login and create an account as loyal customers you are entilted to any promotions or discounts. 
+## Website description: Our group created a vacation rental application, to help showcase available rental properties beach side. Using react-redux, JavaScritp, HTML and CSS for our client-side, we were able to beautifly represent the rental properties that may intrest you. As for the back-end and server, we used express,JavaScript, Node.JS along with prisma database. Login and create an account as loyal customers, you are entilted to promotions or discounts. 
 
 __________________________________________________
 
