@@ -8,7 +8,7 @@ __________________________________________________
 **Ocean Air Vacation Rental App**
 
 **Website URL:**
-https://quiet-castle-41187.herokuapp.com
+https://visitoceanair.com/
 
 
 
@@ -45,6 +45,20 @@ __________________________________________________
 
 
 
+Sign up Feature:
+
+
+https://user-images.githubusercontent.com/80641831/138738885-caf92746-ad41-49a1-af84-14d3d9dab592.mov
+
+
+
+
+
+Coupon Code Feature:
+
+
+
+https://user-images.githubusercontent.com/80641831/138738999-68d0d6c6-3291-4d81-b342-95d4d7c980f0.mov
 
 
 
@@ -52,29 +66,14 @@ __________________________________________________
 
 
 
-
-Tablet Display:
-
+Google Maps Feature:
 
 
 
 
 
 
-Mobile Device:
-
-
-
-
-
-
-
-
-
-Desktop Display:
-
-
-
+https://user-images.githubusercontent.com/80641831/138739164-e247a825-2207-4c83-9df6-5096b1c563f9.mov
 
 
 
