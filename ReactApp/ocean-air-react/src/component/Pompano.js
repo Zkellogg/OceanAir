@@ -5,6 +5,16 @@ import "../CSS/FooterNav.css"
 import "../CSS/App.css"
 
 function Pompano() {
+  // var lastScrollPosition=window.pageYOffset
+  // window.onscroll=function(){
+  //   var currentScrollPosition=window.pageYOffset
+  //   if(lastScrollPosition>currentScrollPosition){
+  //     document.getElementById("footerNav").style.display="flex"
+  //   }else{
+  //     document.getElementById("footerNav").style.display="none"
+  //   }
+  //   lastScrollPosition=currentScrollPosition
+  // }
   return (
     <div>
       <div>
@@ -85,7 +95,7 @@ function Pompano() {
         <div className="modal-header" id="modal-header-div">
           <h4 className="modal-title" id="modal-heading">Pompano Beach</h4>
         </div>
-        <div id="footerNav-button-div">
+        <div id="footerNav-button-div" >
           <a className="btn btn-primary" type="button" id="footerNav-btn" href="https://oceanair.guestybookings.com/listings?city=Pompano%20Beach">
             Book Now
           </a>
