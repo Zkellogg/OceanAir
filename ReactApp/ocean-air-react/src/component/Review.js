@@ -24,7 +24,7 @@ function Review(){
           body: JSON.stringify(details),
         });
         setStatus("Submit");
-        let result = await response.json();
+        await response.json();
         alert("Thank you for contacting us! We will be back with you as soon as possible! ");
       };
 
@@ -34,7 +34,7 @@ function Review(){
                 <form id="review-form" onSubmit={handleSubmit}>
                 <div className="form-group" id="review-heading-div">
                 <h2 className="review-heading"><strong>Enjoyed your stay?</strong></h2><label htmlFor="rating" id="review-stars">
-                            <div class="rating" id="review-textbox">
+                            <div className="rating" id="review-textbox">
                             <input onChange={handleOnChange} type="radio" name="rating" value="5" id="1" /><label className="star" for="1">☆</label>
                             <input onChange={handleOnChange} type="radio" name="rating" value="4" id="2" /><label for="2">☆</label>
                             <input onChange={handleOnChange} type="radio" name="rating" value="3" id="3" /><label for="3">☆</label>
@@ -45,17 +45,17 @@ function Review(){
                     </div>
                     <div className="form-group" id="review-name-div">
                     <label htmlFor="name" id="review-label">
-                    <div id="REVIEW_TITLE" class="question labelAndInput required  " data-error="REVIEW_TITLE_ERROR">
+                    <div id="REVIEW_TITLE" className="question labelAndInput required  " data-error="REVIEW_TITLE_ERROR">
                     <label for="ReviewText">
-                        <span class="ReviewTitle">Who are you?</span></label>
-                        <input onChange={handleOnChange} type="text" name="name" id="ReviewTitle" class="form-control" maxlength="120" placeholder="Name" data-initialerrors="" onfocus="ta.userreview.common.trackFieldFocus(this)" onkeydown="if (event.keyCode == 13) return false" required/>
+                        <span className="ReviewTitle">Who are you?</span></label>
+                        <input onChange={handleOnChange} type="text" name="name" id="ReviewTitle" className="form-control" maxlength="120" placeholder="Name" data-initialerrors="" onfocus="ta.userreview.common.trackFieldFocus(this)" onkeydown="if (event.keyCode == 13) return false" required/>
                     </div>
                     </label>
                     </div>
                     <div className="form-group" id="review-name-div">
                     <label htmlFor="name" id="review-location">
                     <label for="ReviewText">
-                        <span class="ReviewTitle">When did you stay?</span></label>
+                        <span className="ReviewTitle">When did you stay?</span></label>
                         <div className="input-group">
                         <input type="date" onChange={handleOnChange} className="form-control form-control-lg" name="checkoutDate" required/>
                         </div>
@@ -64,7 +64,7 @@ function Review(){
                     <div className="form-group" id="review-name-div">
                     <label htmlFor="name" id="review-location">
                     <label for="ReviewText">
-                        <span class="ReviewTitle">Where did you stay?</span></label>
+                        <span className="ReviewTitle">Where did you stay?</span></label>
                         <div className="input-group">
                         <select onChange={handleOnChange} className="form-control form-control-lg" name="location">
                             <option value="Chivas" name="location">Chivas Apartment</option>
@@ -78,10 +78,10 @@ function Review(){
                     </div>
                     <div className="form-group" id="body-message">
                     <label htmlFor="message" id="review-label">
-                    <div id="REVIEW_TITLE" class="question labelAndInput required  " data-error="REVIEW_TITLE_ERROR">
+                    <div id="REVIEW_TITLE" className="question labelAndInput required  " data-error="REVIEW_TITLE_ERROR">
                     <label for="ReviewText">
-                        <span class="ReviewTitle">Give your review a title</span> </label>
-                        <input onChange={handleOnChange} type="text" name="title" id="ReviewTitle" class="form-control" maxlength="120" placeholder="Summarize your visit" data-initialerrors="" onfocus="ta.userreview.common.trackFieldFocus(this)" onkeydown="if (event.keyCode == 13) return false"/>
+                        <span className="ReviewTitle">Give your review a title</span> </label>
+                        <input onChange={handleOnChange} type="text" name="title" id="ReviewTitle" className="form-control" maxlength="120" placeholder="Summarize your visit" data-initialerrors="" onfocus="ta.userreview.common.trackFieldFocus(this)" onkeydown="if (event.keyCode == 13) return false"/>
                     </div>
                     </label>
                     <label htmlFor="message" id="review-message">

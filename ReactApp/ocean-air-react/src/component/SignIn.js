@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from "react"
+import React, { useState } from "react"
 import "../CSS/SignIn.css";
 import { connect } from "react-redux";
 import { useHistory } from "react-router"

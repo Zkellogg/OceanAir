@@ -34,7 +34,7 @@ function CheckIn() {
             <button
               onClick={handleRoutePrevious}
               type="button"
-              class="btn btn-outline-secondary"
+              className="btn btn-outline-secondary"
               id="back-btn"
             >
               Back to Previous
@@ -45,13 +45,13 @@ function CheckIn() {
             <a
               onClick={handleRoutePrevious}
               type="button"
-              class="btn btn-outline-secondary"
+              className="btn btn-outline-secondary"
               id="back-btn-mobile"
             >
               Back
             </a>
-            <div class="arrow arrow-first"></div>
-            <div class="arrow arrow-second"></div>
+            <div className="arrow arrow-first"></div>
+            <div className="arrow arrow-second"></div>
           </a>
         </div>
         <div className="container-fluid" id="header-opacity"></div>

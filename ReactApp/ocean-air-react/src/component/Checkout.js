@@ -1,7 +1,6 @@
 import React from "react";
 import { useHistory } from "react-router-dom";
 import Navbar from "react-bootstrap/Navbar";
-import Nav from "react-bootstrap/esm/Nav";
 import Footer from "./Footer";
 import logo from "../images/OceanAirLogoB_Locations_600x200.png";
 import "../CSS/CheckIn.css";
@@ -35,7 +34,7 @@ function Checkout() {
             <a
               onClick={handleRoutePrevious}
               type="button"
-              class="btn btn-outline-secondary"
+              className="btn btn-outline-secondary"
               id="back-btn"
             >
               Back to Previous
@@ -46,13 +45,13 @@ function Checkout() {
             <a
               onClick={handleRoutePrevious}
               type="button"
-              class="btn btn-outline-secondary"
+              className="btn btn-outline-secondary"
               id="back-btn-mobile"
             >
               Back
             </a>
-            <div class="arrow arrow-first"></div>
-            <div class="arrow arrow-second"></div>
+            <div className="arrow arrow-first"></div>
+            <div className="arrow arrow-second"></div>
           </a>
         </div>
         <div className="container-fluid" id="header-opacity"></div>

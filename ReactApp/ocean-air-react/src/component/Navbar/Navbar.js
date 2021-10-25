@@ -5,10 +5,8 @@ import Container from "react-bootstrap/Container";
 import logo from "../../images/OceanAirLogoB_Locations_600x200.png";
 import "../../CSS/Navbar.css";
 import { connect } from "react-redux";
-import { useHistory } from "react-router";
 
 function NavBarComp(props) {
-  const history = useHistory();
 
   const handleSignIn = () => {
     if (props.isSignInClicked) {
