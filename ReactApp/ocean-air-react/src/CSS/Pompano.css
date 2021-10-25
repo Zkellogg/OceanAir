@@ -19,11 +19,15 @@
 .main {
   display: flex;
   max-width: 1500px;
+  margin: 2em;
   flex-direction: row;
 }
 
 .description {
-  flex: 2;
+  flex: 2 1;
+  max-width: 60%;
+  padding-top: 2em;
+  padding-bottom: 2em;
 }
 
 .description h1 {
@@ -33,7 +37,7 @@
 .description p {
   line-height: 1.8;
   font-size: 20px;
-  text-align: center;
+  text-align: justify;
 }
 
 .aminities {
@@ -77,11 +81,9 @@
   display: flex;
   flex-direction: column;
   align-items: center;
-  justify-content: center;
   position: sticky;
-  top: 20%;
-  left: 96rem;
-  width: 20rem;
+  top: 35%;
+  width: 25rem;
   height: 22rem;
   border-radius: 1em;
   background:aliceblue;
@@ -101,7 +103,9 @@
 @media only screen and (max-width: 800px) {
   .main {
     flex-direction: column;
+    align-items: inherit;
   }
+
 
   .image-gallery-content .image-gallery-slide .image-gallery-image {
     max-height: calc(100vh - 80px);
@@ -110,7 +114,22 @@
   }
 }
 
-@media (max-width:1530px) {
+@media (max-width:1000px){
+  .description{
+    max-width: 100%;
+  }
+
+  .description p{
+    font-size: 18px;
+  }
+
+  #features-modal{
+    width: 20rem;
+    height: 21rem;
+  }
+}
+
+@media (max-width:800px) {
   #features-modal{
     display: none;
   }
@@ -122,11 +141,7 @@
 }
 
 @media only screen and (min-width:1300px){
-#map-iframe {
-  margin: 1em;
-  border-radius: 1em;
-  width: 72rem;
-}
+
 .image-gallery {
 -webkit-user-select: none;
 -o-user-select: none;

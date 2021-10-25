@@ -38,7 +38,7 @@ function RestaurantsSR() {
             <button
               onClick={handleRoutePrevious}
               type="button"
-              class="btn btn-outline-secondary"
+              className="btn btn-outline-secondary"
               id="back-btn"
             >
               Back to Previous
@@ -49,13 +49,13 @@ function RestaurantsSR() {
             <a
               onClick={handleRoutePrevious}
               type="button"
-              class="btn btn-outline-secondary"
+              className="btn btn-outline-secondary"
               id="back-btn-mobile"
             >
               Back
             </a>
-            <div class="arrow arrow-first"></div>
-            <div class="arrow arrow-second"></div>
+            <div className="arrow arrow-first"></div>
+            <div className="arrow arrow-second"></div>
           </a>
         </div>
         <div className="container-fluid" id="header-opacity"></div>
@@ -71,7 +71,7 @@ function RestaurantsSR() {
                 height="auto"
                 width="500rem"
                 src={oldFloridia}
-                alt="Restaurant Image"
+                alt="Restaurant"
               />
               <h5>33 Heron's Watch Way, Santa Rosa Beach, FL 32459</h5>
               <h5>(850) 534-3045</h5>
@@ -100,7 +100,7 @@ function RestaurantsSR() {
                 height="auto"
                 width="500rem"
                 src={steamboat}
-                alt="Restaurant Image"
+                alt="Restaurant"
               />
               <h5>4935 E County Hwy 30A, Santa Rosa Beach, FL 32459</h5>
               <h5>(850) 213-3167</h5>
@@ -122,7 +122,7 @@ function RestaurantsSR() {
                 height="auto"
                 width="500rem"
                 src={perfectPig}
-                alt="Restaurant Image"
+                alt="Restaurant"
               />
               <h5>4281 E County Highway, Santa Rosa Beach, FL 32459</h5>
               <h5>(850) 213-0701</h5>
@@ -145,7 +145,7 @@ function RestaurantsSR() {
                 height="auto"
                 width="500rem"
                 src={brunos}
-                alt="Restaurant Image"
+                alt="Restaurant"
               />
               <h5>6652 E County Hwy 30A, Watersound, FL 32461</h5>
               <h5>(850) 231-1699</h5>
