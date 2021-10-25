@@ -13,7 +13,6 @@ function Contact() {
       message: message.value,
     };
 
-<<<<<<< HEAD
     let response = await fetch(
       "https://quiet-castle-41187.herokuapp.com/contact",
       {
@@ -24,15 +23,6 @@ function Contact() {
         body: JSON.stringify(details),
       }
     );
-=======
-    let response = await fetch("https://quiet-castle-41187.herokuapp.com/contact", {
-      method: "POST",
-      headers: {
-        "Content-Type": "application/json",
-      },
-      body: JSON.stringify(details),
-    });
->>>>>>> 804d595ab3ffa0095494f2c710b8ccdb70a1b542
     setStatus("Submit");
     let result = await response.json();
     alert(
