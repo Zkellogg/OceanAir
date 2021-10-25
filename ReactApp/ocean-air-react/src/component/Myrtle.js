@@ -1,14 +1,11 @@
 import React from "react";
 import ImageSlider from "./ImageSlider";
 import "../CSS/Pompano.css";
-import Map from "./Map";
+import "../CSS/App.css"
 
 function Myrtle() {
-    return (
-        <div>
-      <div className="title">
-        <h1>Chivas on 30A</h1>
-      </div>
+  return (
+    <div>
       <div>
         <ImageSlider />
       </div>
@@ -80,23 +77,25 @@ function Myrtle() {
           </div>
         </div>
       </div>
-      <Map />
+      <iframe id="map-iframe" width="500" height="500" loading="lazy" allowfullscreen
+        src={"https://www.google.com/maps/embed/v1/place?key=AIzaSyAsSuhDzEqib-0sYnkaJBtS_wDHqlanXLQ&q=23rd+Ave+N,Myrtle+Beach,+South+Carolina"}>
+      </iframe>
       <nav className="navbar fixed-bottom navbar-light bg-light" id="footerNav">
-            <div className="modal-header" id="modal-header-div">
-                <h4 className="modal-title" id="modal-heading">Myrtle Beach</h4>
-            </div>
-            <div id="footerNav-button-div">
-                <a className="btn btn-primary" type="button" id="footerNav-btn" href="https://oceanair.guestybookings.com/listings?city=Myrtle%20Beach">
-                    Book Now
-                </a>
-                <a className="btn btn-primary" id="footerNav-btn" type="button" href="/check-in">Check-In</a>
-                <a className="btn btn-primary" id="footerNav-btn" type="button" href="/check-out">Check-Out</a>
-                <a className="btn btn-primary" id="footerNav-btn" type="button" href="/nearby-restaurants/Myrtle-Beach">Nearby Restaurants</a>
-                <a className="btn btn-primary" id="footerNav-btn" type="button" href="/things-to-do/Myrtle-Beach">Things To Do</a>
-            </div>
-        </nav>
+        <div className="modal-header" id="modal-header-div">
+          <h4 className="modal-title" id="modal-heading">Myrtle Beach</h4>
+        </div>
+        <div id="footerNav-button-div">
+          <a className="btn btn-primary" type="button" id="footerNav-btn" href="https://oceanair.guestybookings.com/listings?city=Myrtle%20Beach">
+            Book Now
+          </a>
+          <a className="btn btn-primary" id="footerNav-btn" type="button" href="/check-in">Check-In</a>
+          <a className="btn btn-primary" id="footerNav-btn" type="button" href="/check-out">Check-Out</a>
+          <a className="btn btn-primary" id="footerNav-btn" type="button" href="/nearby-restaurants/Myrtle-Beach">Nearby Restaurants</a>
+          <a className="btn btn-primary" id="footerNav-btn" type="button" href="/things-to-do/Myrtle-Beach">Things To Do</a>
+        </div>
+      </nav>
     </div>
-    );
+  );
 }
 
 export default Myrtle;
