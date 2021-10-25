@@ -73,7 +73,7 @@ function Seagrove() {
             <a className="btn btn-primary" id="modal-btn" type="button" href="/check-in">Check-In Instructions</a>
             <a className="btn btn-primary" id="modal-btn" type="button" href="/check-out">Check-Out Instructions</a>
             <a className="btn btn-primary" id="modal-btn" type="button" href="/nearby-restaurants/Seagrove-Beach">Nearby Restaurants</a>
-            <a className="btn btn-primary" id="modal-btn" type="button" href="/things-to-do/Seagrove-Beach">Things To Do</a>
+            <a className="btn btn-primary" id="modal-btn" type="button" href="/things-to-do/30A-Seagrove-Beach">Things To Do</a>
           </div>
         </div>
       </div>
@@ -91,7 +91,7 @@ function Seagrove() {
           <a className="btn btn-primary" id="footerNav-btn" type="button" href="/check-in">Check-In</a>
           <a className="btn btn-primary" id="footerNav-btn" type="button" href="/check-out">Check-Out</a>
           <a className="btn btn-primary" id="footerNav-btn" type="button" href="/nearby-restaurants/Seagrove-Beach">Nearby Restaurants</a>
-          <a className="btn btn-primary" id="footerNav-btn" type="button" href="/things-to-do/Seagrove-Beach">Things To Do</a>
+          <a className="btn btn-primary" id="footerNav-btn" type="button" href="/things-to-do/30A-Seagrove-Beach">Things To Do</a>
         </div>
       </nav>
     </div>
